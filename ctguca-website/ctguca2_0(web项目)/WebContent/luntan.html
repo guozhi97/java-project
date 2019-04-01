@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta charset="UTF-8" name="viewport"
+	content="initial-scale=1,width=device-width,maximum-scale=1,user-scalable=no">
+<title>三峡大学计算机协会</title>
+<link rel="stylesheet" href="css/luntan-css/luntan-header.css" />
+<link rel="stylesheet" href="css/luntan-css/luntan-section.css" />
+<link rel="stylesheet" href="css/luntan-css/luntan-out.css" />
+<script type="text/javascript" src="js/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="js/luntan.js"  charset="utf-8"></script>
+</head>
+
+<body>
+	<header>
+		<div>
+			<ul>
+				<li><a href="luntan.html">CTGUCA|论坛</a></li>
+				<li><a href="#">热门</a></li>
+				<li><a href="#">最新</a></li>
+				<li id="h-input"><input type="text" placeholder="招新" /></li>
+				<li><button>搜索</button></li>
+			</ul>
+			<ul>
+				<li><img src="img/index-img/tipico.png" width="23px"
+					height="23px" />
+					<dl class="top-drop2">
+						<dt id="top-d2-top">消息</dt>
+						<dd>来自陌生人的消息</dd>
+						<dd>来自陌生人的消息</dd>
+					</dl></li>
+				<li><img src="touxiang/tou0.jpg" width="30px" height="30px" />
+					<dl class="top-drop">
+						<dd>修改信息</dd>
+						<dd>登录</dd>
+					</dl></li>
+			</ul>
+		</div>
+	</header>
+	<section>
+		<div class="s-left">
+			<ul class="s-top">
+				<li id="torequest"><img src="img/index-img/shoucang.png" />提问</li>
+				<li id="towriter"><img src="img/index-img/share.png" />写文章</li>
+				<li id="myaction"><img src="img/index-img/tip2ico.png" />自己的动态</li>
+			</ul>
+			<article>
+				<div class="list">
+					<span class="clo">&Chi;</span>
+					<div class="ainfo">
+						<img src="touxiang/tou2.jpg" class="aico" /> <span class="aname">李心如</span><span>|</span>
+						<span class="aintr">关注我，看更多精彩的有趣短视频,开心每一天。</span>
+					</div>
+					<h3 class="atitle">一个人能无耻到什么地步？</h3>
+					<div class="acontent">刚看到这个视频，非常惊讶!!!</div>
+					<ul class="discuss">
+						<li><img src="img/index-img/agree.png" /><span>赞同0</span></li>
+						<li><img src="img/index-img/discuss.png" /><span>0条评论</span>
+						</li>
+						<li>举报</li>
+						<li>1年前</li>
+
+					</ul>
+					<div class="comments">
+						<h4>
+							<span>0</span>&nbsp;条评论
+						</h4>
+						<div class="tonext">
+							<span>刷新中...</span> <img src="img/index-img/tonext.jpg" />
+						</div>
+						<div class="c-list">
+							<img src="touxiang/tou2.jpg" /> <span>飞翔de鱼</span>
+							<div>我笑点低，hahaha</div>
+							<span>举报</span><span>1年前</span>
+						</div>
+						<div>
+							<input type="text" placeholder="写下你的评论" />
+							<button class="btn-com">评论</button>
+						</div>
+					</div>
+				</div>
+			</article>
+		</div>
+		<div class="s-right">
+			<div class="s-r-all">
+				<h3>公告</h3>
+				<p>由于论坛才建立不久，部分功能存在一定的缺陷，需要往后逐渐完善。</p>
+				<p>欢迎大家通过官网下面的反馈建议，向我们提交您的宝贵建议。</p>
+			</div>
+			<div class="s-r-disc">
+				<p>三峡大学计算机协会建站组</p>
+			</div>
+		</div>
+	</section>
+	<div class="me-bg"></div>
+	<form class="medelone">
+		<h4>修改个人资料</h4>
+		<span>&Chi;</span>
+		<div>
+			<img src="touxiang/tou1.jpg" /> <select id="qietu">
+				<option value="touxiang/tou1.jpg" selected="selected">派大星</option>
+				<option value="touxiang/tou2.jpg">邪恶</option>
+				<option value="touxiang/tou3.jpg">文字</option>
+				<option value="touxiang/tou4.jpg">陈奕迅</option>
+				<option value="touxiang/tou5.jpg">猫咪</option>
+				<option value="touxiang/tou6.jpg">动漫</option>
+			</select> <input type="text" placeholder="请输入昵称" required="required"
+				maxlength="20" /> <input type="password" placeholder=""
+				maxlength="20" /> <input type="text" placeholder="请输入个性签名"
+				required="required" maxlength="50" />
+		</div>
+		<!--<button id="btn-alert">修改</button>-->
+		<input type="submit" value="修改" />
+	</form>
+
+	<form class="model2">
+		<h4>写文章</h4>
+		<span>&Chi;</span>
+		<div>
+			<input type="text" placeholder="文章的标题(不填写将放入提问)" maxlength="20" />
+			<textarea placeholder="具体内容" maxlength="200" required="required"></textarea>
+		</div>
+		<!--<button id="btn-submit">提交</button>-->
+		<input type="submit" value="提交" />
+	</form>
+
+	<form class="model3">
+		<h4>提问</h4>
+		<span>&Chi;</span>
+		<div>
+			<textarea placeholder="具体内容" maxlength="100" required="required"></textarea>
+		</div>
+		<!--<button id="btn-submit">提交</button>-->
+		<input type="submit" value="提交" />
+	</form>
+
+	<form class="model4">
+		<h4>登录</h4>
+		<span>&Chi;</span>
+		<div>
+			<input type="text" placeholder="账号" maxlength="20"
+				required="required" /> <input type="password" placeholder="密码"
+				maxlength="20" required="required" />
+		</div>
+		<!--<button id="btn-submit">提交</button>-->
+		<input type="button" value="新用户" /> <input type="submit" value="登录" />
+	</form>
+
+	<form class="model5">
+		<h4>注册</h4>
+		<span>&Chi;</span>
+		<div>
+			<input type="text" placeholder="账号(最少六位、由字母和数字组成)" maxlength="20"
+				pattern="^([a-zA-Z0-9]{6,})$" required="required" /> <input
+				type="password" placeholder="密码(最少六位、由字母和数字组成)" maxlength="20"
+				required="required" pattern="^([a-zA-Z0-9]{6,})$" />
+		</div>
+		<!--<button id="btn-submit">提交</button>-->
+		<input type="submit" value="立即注册并登录" />
+	</form>
+
+</body>
+
+</html>

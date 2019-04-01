@@ -1,0 +1,106 @@
+section{
+	height: 550px;
+	min-height: 550px;
+	background-image: url(../../img/register-img/sec-bg.png);
+	background-size:cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+section>form{
+	width: 383px;
+	height: 394px;
+	position: absolute;
+	left: 35%;
+	top: 15%;
+	z-index: 3;
+}
+section:after{
+	content: '';
+	display: block;
+	position: absolute;
+	width: 400px;
+	height: 450px;
+	left: 34%;
+	top: 10%;
+	z-index: 2;
+	opacity: 0.4;
+	border: 1px solid #000000;
+	border-radius:5px ;
+	background-color: #333333;
+}
+section>form>input{
+	width: 350px;
+	height: 30px;
+	padding: 4px;
+	margin: 0 auto;
+	display: block;
+	border: 1px solid #333;
+	border-radius: 5px;
+	text-indent: 1em;
+	margin-top: 10px;
+}
+section>form>p#tip{
+	font-size: 14px;
+	color: #000;
+	border: 1px solid gray;
+	position: absolute;
+	left: 410px;
+	top: 13px;
+	width: 100px;
+	height: 30px;
+	border-radius: 5px;
+	text-align: center;
+	line-height: 30px;
+	background-color: darkgray;
+	z-index: 4px;
+	display: none;
+}
+
+section>form>div.sex{
+	width: 350px;
+	height: 30px;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 10px;
+}
+section>form>div.sex>button{
+	height: 30px;
+	width: 50px;
+	border-radius: 5px;
+	background-color: #FFFFFF;
+	border: 2px solid #00CCFF;
+	margin-right: 10px;
+}
+.sex-active{
+	background-color: #00CCFF !important;	
+}
+section>form>span.re-name{
+	font-size: 20px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 25px;
+    color: #eeeeee;
+    margin-top: 20px;
+}
+section>form>select{
+	width: 100px;
+	height: 30px;
+	border: none;
+	margin-top: 20px;
+	border-radius: 3px;
+	margin-left: 10px;
+}
+section>form>input:last-of-type{
+	text-indent: 0;
+	height: 38px;
+	background-color: #00CCFF;
+	border: none;
+	border-radius: 5px;
+	margin-top: 20px;
+	color:#FFFFFF;
+	font-size: 16px;
+}
+section>form>input:last-of-type:hover{
+	background-color: #00bbee;
+	
+}

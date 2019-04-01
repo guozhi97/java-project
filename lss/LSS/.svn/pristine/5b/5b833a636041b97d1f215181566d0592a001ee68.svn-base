@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <settings>
+		<!-- 需要配合log4j配置文件 -->
+		<setting name="logImpl" value="LOG4J"/>
+	</settings>
+    <typeAliases>
+    <typeAlias alias="User" type="com.ctgu.lss.user.entity.User"/> 
+    <typeAlias alias="Address" type="com.ctgu.lss.address.entity.Address"/> 
+    <typeAlias alias="Book" type="com.ctgu.lss.book.entity.Book"/> 
+    <typeAlias alias="Order" type="com.ctgu.lss.order.entity.Order"/> 
+    <typeAlias alias="Department" type="com.ctgu.lss.dept.entity.Department"/>    
+    <typeAlias alias="DelivArea" type="com.ctgu.lss.delivarea.entity.DelivArea"/> 
+    
+    </typeAliases>
+</configuration>

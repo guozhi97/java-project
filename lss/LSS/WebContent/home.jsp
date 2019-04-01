@@ -1,0 +1,381 @@
+<%@page import="com.ctgu.lss.book.entity.BookInfo"%>
+<%@page import="java.util.List"%>
+<%@ page language="java" contentType="text/html; charset=utf-8"
+    pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>首页</title>
+
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" >
+		<link href="css/AdminLTF.css" rel="stylesheet" type="text/css" >
+
+		<link href="AmazeUI-2.4.2/assets/css/amazeui.css" rel="stylesheet" type="text/css" />
+		<link href="AmazeUI-2.4.2/assets/css/admin.css" rel="stylesheet" type="text/css" />
+
+		<link href="basic/css/demo.css" rel="stylesheet" type="text/css" />
+
+		<link href="css/hmstyle.css" rel="stylesheet" type="text/css" />
+	
+		<script src="AmazeUI-2.4.2/assets/js/jquery.min.js"></script>
+		<script src="AmazeUI-2.4.2/assets/js/amazeui.min.js"></script>
+		<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript">
+		
+		//同步ajax加载数据
+		$(document).ready(function(){
+		 	$("#more").css("display","none"); 
+			var currentPage = 1;
+			if($("#searchInput").val().length != 0){
+				//alert($("#searchInput").val());
+				$("#more").html("点击加载更多");
+			
+				search();
+			}
+		
+			function search(){
+				$.ajax({
+					dataType : "json",
+					type : "GET", // 提交方式
+					url:"searchBook",
+					data:{
+						"anywords":$("#searchInput").val(),
+						"page":currentPage,
+						"searchType":0
+					},
+					success:function(data){
+						if(data == "failed"){
+							alert("没有找到你想要的内容");
+							return;
+						}
+						$("#more").css("display","inline"); 
+						$.each(data.bookMessage,function(i,item){
+							$("tbody").append("<tr><td>"+(20*(currentPage - 1) + i + 1) +"</td>"+
+			                        "<td>"+item.book_name+"</td>"+
+			                        "<td>"+item.author+"</td>"+
+			                        "<td>"+item.publish+" </td>"+
+			                        "<td>"+item.publish_year+"</td>"+
+			                        "<td>"+item.book_num+"</td>"+
+			                        "<td>"+item.holding_num+"</td>"+
+			                        "<td>"+item.can_borrow+"</td>"+
+			                        "<td><button class='add'>添加</button>"+
+			                        "</td></tr>");
+							
+							if (currentPage == data.resultPages) {
+								$("#more").html("已经加载全部");
+								$("#more").attr("disabled","disabled");
+							}
+							
+						});
+					},
+					error:function(){
+						currentPage--;
+						alert("没有您想要的内容或者网络连接中断");
+					}
+					
+					
+				});
+				
+			}
+			$("#ai-topsearch").click(function(){
+						currentPage = 1;
+						$("#more").html("点击加载更多");
+						$("#more").removeAttr("disabled");
+						if($("#searchInput").val().length != 0)
+							{
+								//	$("#more").removeAttr("disabled");
+									$("tbody").html("");
+									search();
+									$("#more").css("display", "block");
+									
+							}
+			});
+			
+			
+			$("#more").click(function(){
+				currentPage++;
+				search();
+			});
+			
+			//获取table中选中行的数据
+			$("table").delegate('table tr .add', 'click', function () {
+				var btn = $(this);//找到tr原色
+				var tr = btn.parent().parent();
+				var td = tr.find("td");
+				$.ajax({
+					dataType : "json",
+					type : "POST", // 提交方式
+					url:"add",
+					data:{
+						"book_name":td[1].innerHTML,
+						"author":td[2].innerHTML,
+						"publish":td[3].innerHTML,
+						"publish_year":td[4].innerHTML,
+						"book_num":td[5].innerHTML,
+						"holding_num":td[6].innerHTML,
+						"can_borrow":td[7].innerHTML,
+						"ctrlno":0
+					},
+					success:function(data){
+						btn.attr("disabled","disabled");
+						$(".cart_num").html(data);
+						$("#J_MiniCartNum").html(data);
+					},
+					error:function(){
+						alert("当前网络不稳定，添加失败");
+					}
+				});
+				
+				
+				});
+			
+			
+		});
+		</script>
+	</head>
+
+	<body>
+		<div class="hmtop" id="top">
+			<!--顶部导航条 -->
+			<div class="am-container header">
+				<ul class="message-l">
+					<div class="topMessage">
+						<div class="menu-hd">
+							<c:choose>
+							<c:when test="${sessionScope.userName==null}">
+							<a href="login.jsp" target="_top" class="h">亲,请登录</a>
+							<a href="register.jsp" target="_top">免费注册</a>
+							</c:when>
+							<c:otherwise>
+							<a href="#"  class="h">${sessionScope.userName}</a>
+							<a href="#" >欢迎您</a>
+							</c:otherwise>
+							</c:choose>
+						</div>
+					</div>
+				</ul>
+				<ul class="message-r">
+					<c:choose>
+					<c:when test="${sessionScope.userName==null}">
+					<!-- <div class="topMessage my-shangcheng">
+						<div class="menu-hd MyShangcheng"><a href="login.jsp" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+					</div> -->
+					<div class="topMessage home">
+						<div class="menu-hd"><a href="getMyOrder" target="_top" class="h"><i class="am-icon-list am-icon-fw"></i>订单中心</a></div>
+					</div>
+					<div class="topMessage mini-cart">
+						<div class="menu-hd"><a id="mc-menu-hd" href="shopcart.jsp" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">${sessionScope.bookList.size()}</strong></a></div>
+					</div>
+					</c:when>
+					<c:otherwise>
+				<!-- 	<div class="topMessage my-shangcheng">
+						<div class="menu-hd MyShangcheng"><a href="information.jsp" target="_top"><i class="am-icon-user am-icon-fw"></i>个人中心</a></div>
+					</div> -->
+					<div class="topMessage home">
+						<div class="menu-hd"><a href="getMyOrder" target="_top" class="h"><i class="am-icon-list am-icon-fw"></i>订单中心</a></div>
+					</div>
+					<div class="topMessage mini-cart">
+						<div class="menu-hd"><a id="mc-menu-hd" href="shopcart.jsp" target="_top"><i class="am-icon-shopping-cart  am-icon-fw"></i><span>购物车</span><strong id="J_MiniCartNum" class="h">${sessionScope.bookList.size()}</strong></a></div>
+					</div>
+					<div class="topMessage favorite">
+						<div class="menu-hd"><a href="exit" target="_top"><i class="am-icon-heart am-icon-fw"></i><span>退出</span></a></div>
+					</div>
+					</c:otherwise>
+					</c:choose>
+				</ul>
+				</div>
+
+				<!--悬浮搜索框-->
+
+				<div class="nav white">
+					
+					<div class="logoBig">
+						<li><img src="images/nlogo.jpg" /></li>
+					</div>
+
+					<div class="search-bar pr">
+						<a name="index_none_header_sysc" href="#"></a>
+						<form>
+							<input id="searchInput" value = "${param.index_none_header_sysc}" name="index_none_header_sysc" type="text" placeholder="搜索一下，你就知道" autocomplete="off">
+							<input id="ai-topsearch" class="submit am-btn" value="搜索" index="1" type="button" >
+						</form>
+					</div>
+				</div>
+
+				<div class="clear"></div>
+			</div>
+			<div class="Newcontainer">
+			<div class="box-body">
+			<table id="tb" class="table table-bordered table-striped">
+			  		<thead>
+                      <tr>
+                      	 <th>编号 </th>
+                         <th>书名</th>
+                         <th>作者</th>
+                         <th>出版社</th>
+                         <th>出版年</th>
+                         <th>索取号</th>
+                         <th>馆藏</th>
+                         <th>可借</th>
+                         <th>操作</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                     <!-- 
+                      <tr>
+                        <td>1</td>
+                        <td>挪威的森林</td>
+                        <td>村上春树著；林少华译</td>
+                        <td>上海译文出版社 </td>
+                        <td>2014 </td>
+                        <td>I313.4/C987/4/-6</td>
+                        <td>4</td>
+                        <td>1</td>
+                        <td><button id="button1">添加</button>
+                        <button>删除</button></td>
+                      </tr>
+                     
+                     -->
+                      </tbody>
+                      
+			</table>
+			<button id='more' style="text-align: center;">点击加载更多</button>
+			</div>
+			</div>
+			
+			        <div class="footer ">
+						<div class="footer-bd ">
+							<p> 
+								<em>Copyright © 2016-2017 <a href="http://www.ctgu.edu.cn/" style="color: #0044bb" target="_blank" title="三峡大学">三峡大学计算机与信息学院</a> . 所有权拥有者</em>
+							</p>
+						</div>
+					</div>
+					  
+		</div>
+		</div>
+	
+		<!--菜单 -->
+		<div class=tip>
+			<div id="sidebar">
+				<div id="wrap">
+					<div id="prof" class="item ">
+						<a href="# ">
+							<span class="setting "></span>
+						</a>
+						<div class="ibar_login_box status_login ">
+							<div class="avatar_box ">
+								<p class="avatar_imgbox "><img src="images/no-img_mid_.jpg " /></p>
+								<ul class="user_info ">
+									<li>用户名：${sessionScope.userName}</li>
+									<li>级&nbsp;别：普通会员</li>
+								</ul>
+							</div>
+							<div class="login_btnbox ">
+								<a href="getMyOrder" class="login_order ">我的订单</a>
+								<a href="# " class="login_favorite ">我的收藏</a>
+							</div>
+							<i class="icon_arrow_white "></i>
+						</div>
+
+					</div>
+					<c:choose>
+					<c:when test="${sessionScope.userName == null }">
+						
+					<div id="shopCart" class="item" onclick="function(){location.href='shopcart.jsp'};">
+						<a href="shopcart.jsp">
+							<span class="message "></span>
+						</a>
+						<p>
+							购物车
+						</p>
+						<c:choose>
+						<c:when test="${sessionScope.bookList == null}">
+						<p class="cart_num ">0</p>
+						</c:when>
+						<c:otherwise>
+						<p class="cart_num ">${sessionScope.bookList.size()}</p>
+						</c:otherwise>
+						</c:choose>
+					</div>
+					</c:when>
+					<c:otherwise>
+					<div id="shopCart" class="item">
+						<a href="shopcart.jsp">
+							<span class="message "></span>
+						</a>
+						<p>
+							购物车
+						</p>
+						<p class="cart_num ">${sessionScope.bookList.size()}</p>
+					</div>
+					</c:otherwise>
+					</c:choose>
+					<div id="foot " class="item ">
+					
+					</div>
+
+					<div id="brand " class="item ">
+					
+					</div>
+
+					<div class="quick_toggle ">
+						<li class="qtitem ">
+							<a href="# "><span class="kfzx "></span></a>
+							<div class="mp_tooltip ">客服中心<i class="icon_arrow_right_black "></i></div>
+						</li>
+
+						<li class="qtitem ">
+							<a href="#top " class="return_top "><span class="top "></span></a>
+						</li>
+					</div>
+
+					<!--回到顶部 -->
+					<div id="quick_links_pop " class="quick_links_pop hide "></div>
+
+				</div>
+
+			</div>
+			<div id="prof-content " class="nav-content ">
+				<div class="nav-con-close ">
+					<i class="am-icon-angle-right am-icon-fw "></i>
+				</div>
+				<div>
+					我
+				</div>
+			</div>
+			<div id="shopCart-content " class="nav-content ">
+				<div class="nav-con-close ">
+					<i class="am-icon-angle-right am-icon-fw "></i>
+				</div>
+				<div>
+					购物车
+				</div>
+			</div>
+		
+			<div id="foot-content " class="nav-content ">
+				<div class="nav-con-close ">
+					<i class="am-icon-angle-right am-icon-fw "></i>
+				</div>
+				<div>
+					足迹
+				</div>
+			</div>
+			<div id="brand-content " class="nav-content ">
+				<div class="nav-con-close ">
+					<i class="am-icon-angle-right am-icon-fw "></i>
+				</div>
+				<div>
+					收藏
+				</div>
+			</div>
+		</div>
+		<script>
+			window.jQuery || document.write('<script src="basic/js/jquery.min.js "><\/script>');
+		</script>
+		<script type="text/javascript " src="basic/js/quick_links.js "></script>
+	</body>
+
+</html>

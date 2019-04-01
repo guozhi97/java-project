@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ctgu.lss.user.dao.UserDao">
+
+    <cache readOnly="true" eviction="FIFO" ></cache>
+	<!-- 为了返回list 类型而定义的returnMap -->
+	<resultMap type="User" id="UserList">
+		<id column="user_id" property="user_id" />
+		<result column="password" property="password" />
+		<result column="real_name" property="real_name" />
+		<result column="sex" property="sex" />
+		<result column="reader_code" property="reader_code" />
+		<result column="idcard_code" property="idcard_code" />
+		<result column="qq" property="qq" />
+		<result column="dept" property="mobile" />
+		<result column="office_phone" property="office_phone" />
+		<result column="user_type" property="user_type" />
+	</resultMap>
+	
+
+	<select id="findById" parameterType="java.lang.String" resultType="User">
+		select
+		*
+		from t_user where user_id = #{user_id}
+	</select>
+
+	<select id="findAll" resultMap="UserList">
+		select * from t_user
+	</select>
+
+
+	<!--对于自增长的对象，如果不设定主键值，那么就使用如下的属性配置 useGeneratedKeys="true" keyProperty="id" -->
+	<insert id="doInsert" parameterType="User">
+		insert into
+		t_user(user_id,password,real_name,sex,reader_code,idcard_num,qq,dept,mobile,office_phone,user_type)
+		values(#{user_id},#{password},#{real_name},#{sex},#{reader_code},#{idcard_num},#{qq},#{dept},#{mobile},#{office_phone},#{user_type})
+	</insert>
+
+	<update id="doUpdate" parameterType="User">
+		update
+		t_pick_order set
+		user_id=#{user_id},password=#{password},real_name=#{real_name},sex=#{sex},
+		reader_code=#{reader_code},idcard_num=#{idcard_num},qq=#{qq},dept=#{dept},mobile=#{mobile},office_phone=#{office_phone},user_type=#{user_type}
+		where
+		user_id=#{user_id}
+	</update>
+
+
+	<delete id="doDelete" parameterType="String">
+		delete from t_user
+		where user_id = #{user_id}
+	</delete>
+
+</mapper>

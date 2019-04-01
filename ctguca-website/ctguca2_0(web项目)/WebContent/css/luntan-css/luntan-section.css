@@ -1,0 +1,359 @@
+section {
+	width: 1032px;
+	min-height: 600px;
+	overflow: hidden;
+	margin: 0 auto;
+	padding-top: 60px;
+	position: relative;
+}
+
+section>div.s-left {
+	width: 710px;
+	height: 100%;
+	float: left;
+	/*border: 1px solid red;*/
+}
+
+section>div.s-left>ul {
+	width: 100%;
+	height: 50px;
+	background-color: #FFFFFF;
+	box-shadow: 1px 1px 3px rgba(26, 26, 26, 0.1);
+}
+
+section>div.s-left>ul>li {
+	float: left;
+	margin-left: 30px;
+	height: 45px;
+	color: #333;
+	font-size: 16px;
+	line-height: 45px;
+}
+
+section>div.s-left>ul>li:hover {
+	color: #0084FF;
+	cursor: pointer;
+}
+
+section>div.s-left>ul>li>img {
+	width: 20px;
+	margin-right: 5px;
+	height: 20px;
+	vertical-align: middle;
+}
+
+article>div.list {
+	padding: 20px;
+	position: relative;
+	margin-top: 10px;
+	width: 670px;
+	min-height: 200px;
+	background-color: #FFFFFF;
+	box-shadow: 1px 1px 3px rgba(26, 26, 26, 0.1);
+	display:none;
+}
+
+article>div.list>h3 {
+	color: #333333;
+	height: 50px;
+	line-height: 50px;
+}
+
+article>div.list>span.clo {
+	position: absolute;
+	right: 10px;
+	top: 5px;
+	color: gray;
+	cursor: pointer;
+	display: none;
+}
+
+article>div.list:hover>span.clo{
+	display: block;
+}
+
+article div.ainfo>img {
+	width: 24px;
+	height: 24px;
+	vertical-align: middle;
+	margin-right: 5px;
+	border: 1px solid #EBEBEB;
+	border-radius: 3px;
+}
+
+article div.ainfo>span:first-of-type {
+	font-weight: 600;
+	font-size: 15px;
+	margin-right: 5px;
+}
+
+article div.ainfo>span:last-of-type {
+	font-size: 13px;
+	color: gray;
+}
+
+article div.acontent {
+	min-height: 60px;
+}
+
+article ul.discuss {
+	width: 100%;
+	height: 32px;
+	margin-top: 10px;
+	/*padding: 5px;*/
+}
+
+article ul.discuss>li {
+	float: left;
+	height: 32px;
+	margin-right: 20px;
+	cursor: pointer;
+}
+
+article ul.discuss>li>img {
+	vertical-align: middle;
+	margin-right: 7px;
+}
+
+article ul.discuss>li:first-of-type {
+	border: none;
+	border-radius: 5px;
+	width: 110px;
+	background-color: rgba(0, 132, 255, .1);
+	text-align: center;
+	line-height: 32px;
+	color: #0084ff;
+	padding: 3px;
+}
+
+.btn-dis-act {
+	color: #eee;
+	background-color: #0084ff;
+}
+
+article ul.discuss>li:nth-of-type(2) {
+	border: none;
+	width: 110px;
+	text-align: center;
+	line-height: 32px;
+	color: darkgray;
+	font-size: 14px;
+}
+
+article ul.discuss>li:nth-of-type(2):hover {
+	color: gray;
+}
+
+article ul.discuss>li:nth-of-type(3) {
+	border: none;
+	text-align: center;
+	line-height: 32px;
+	color: darkgray;
+	font-size: 14px;
+	float: right;
+}
+
+
+article ul.discuss>li:nth-of-type(3):hover {
+	color: gray;
+}
+
+article ul.discuss>li:nth-of-type(4) {
+	border: none;
+	text-align: center;
+	line-height: 32px;
+	color: darkgray;
+	font-size: 14px;
+	float: right;
+}
+
+
+
+article div.comments {
+	display: none;
+	width: 660px;
+	/*min-height: 200px;*/
+	margin: 0 auto;
+	margin-top: 20px;
+	box-shadow: 0px 0px 3px 2px rgba(26, 26, 26, 0.1);
+	overflow: hidden;
+}
+
+article div.comments>h4 {
+	font-size: 16px;
+	line-height: 50px;
+	text-indent: 20px;
+}
+
+article div.comments>div.tonext{
+	padding: 10px;
+	text-align: center;
+	border-top: 1px solid #EBEBEB;
+}
+article div.comments>div.tonext>img{
+	vertical-align: middle;
+	height: 30px;
+	width: 30px;
+	margin-left: 10px;
+	border-radius: 15px;
+	/*animation: circles .25s,100ms ease-in-out infinite;*/
+	/*animation-fill-mode: forwards;*/
+	/*transform: rotate(360deg);
+	-webkit-transform-origin: center bottom;
+	transform-origin: center bottom;*/
+	-webkit-transform: rotate(360deg);
+	animation: rotation 1s linear infinite;
+}
+
+@-webkit-keyframes rotation{
+from {-webkit-transform: rotate(0deg);}
+to {-webkit-transform: rotate(360deg);}
+}
+
+
+article div.comments>div.c-list {
+	min-height: 70px;
+	padding: 15px;
+	border-top: 1px solid #EBEBEB;
+	/*border: 1px solid gray;*/
+	display:none;
+}
+
+
+
+article div.comments>div.c-list>img {
+	width: 24px;
+	margin-right: 5px;
+	height: 24px;
+	vertical-align: middle;
+}
+
+article div.comments>div.c-list>span{
+	cursor: pointer;
+}
+
+
+article div.comments>div.c-list>span:first-of-type {
+	font-size: 15px;
+}
+
+article div.comments>div.c-list>span:nth-of-type(2){
+	float: right;
+	color: darkgray;
+	font-size: 14px;
+	margin: 5px 5px 0px 0px;
+}
+
+
+article div.comments>div.c-list>span:nth-of-type(2):hover{
+	color: gray;
+}
+
+article div.comments>div.c-list>span:last-of-type {
+	float: right;
+	color: darkgray;
+	font-size: 14px;
+	margin: 5px 5px 0px 0px;
+}
+
+
+
+article div.comments>div.c-list>div {
+	margin-top: 10px;
+	font-size: 15px;
+	color: #333;
+}
+article div.comments>div.c-list>div:after{
+	content: '';
+	clear: both;
+	display: block;
+}
+
+article div.comments>div:last-of-type {
+	border-top: 1px solid #EBEBEB;
+	padding-top: 7px;
+	padding-bottom: 10px;
+}
+
+article div.comments>div:last-of-type>input {
+	width: 400px;
+	height: 24px;
+	padding: 4px 12px;
+	margin-left: 15px;
+	border: 1px solid #EEEEEE;
+	background-color: #DCDCDC;
+	border-radius: 3px;
+}
+
+article div.comments>div:last-of-type>button {
+	width: 60px;
+	height: 32px;
+	border: none;
+	border-radius: 3px;
+	color: #FFFFFF;
+	font-size: 14px;
+	background-color: #0084FF;
+	outline: none;
+}
+
+article div.comments>div:last-of-type>input:focus {
+	animation: comright .25s, 100ms ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+article div.comments>div:last-of-type>input:focus+button {
+	animation: comless .25s,100ms ease-in-out;
+	animation-fill-mode: forwards;
+}
+
+@keyframes comless {
+	from {
+		width: 60px;
+		height: 32px;
+	}
+	to {
+		width: 2px;
+		height: 2px;
+	}
+}
+
+@keyframes comright {
+	from {
+		width: 400px;
+	}
+	to {
+		width: 600px;
+	}
+}
+section>div.s-right {
+	position: absolute;
+	top: 62px;
+	right:0px;
+	width: 290px;
+
+	/*border: 1px solid red;*/
+
+	box-shadow: 0px 0px 3px 1px rgba(26, 26, 26, 0.1);
+}
+section>div.s-right>div.s-r-all{
+	background-color: #FFFFFF;
+	height: 200px;
+	padding: 10px;
+}
+section>div.s-right>div.s-r-all>h3{
+	text-align: center;	
+	line-height: 40px;
+	color: #333;
+	border-bottom: 1px solid #EBEBEB;
+}
+section>div.s-right>div.s-r-all>p{
+	text-indent: 2em;
+	line-height: 30px;
+	color: #777;
+	font-weight:300;
+}
+section>div.s-right>div.s-r-disc{
+	font-size:12px;
+	color:#777;
+	text-align: center;
+}

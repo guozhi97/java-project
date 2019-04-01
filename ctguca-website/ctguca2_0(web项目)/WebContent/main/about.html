@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8" name="viewport" content="initial-scale=1,width=device-width,maximum-scale=1,user-scalable=no">
+		<title>三峡大学计算机协会</title>
+		<link rel="stylesheet" href="../css/com.css" />
+		<link rel="stylesheet" href="../css/index-css/header.css" />
+		<link rel="stylesheet" href="../css/about-css/section.css" />
+		<link rel="stylesheet" href="../css/index-css/footer.css" />
+		<script type="text/javascript" src="../js/jquery/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/to-admin.js"></script>
+	</head>
+	<script type="text/javascript">
+		$(function(){
+			/* console.log("js2"); */
+			$('div.mtitle>button').eq(0).click(function(){
+				$(this).next().removeClass('active');
+				$(this).addClass('active');
+				$('div#con1').show();
+				$('div#con2').hide();
+			})
+			$('div.mtitle>button').eq(1).click(function(){
+				$(this).prev().removeClass('active');
+				$(this).addClass('active');
+				$('div#con2').show();
+				$('div#con1').hide();
+			})
+		})
+	</script>
+	<body>
+<header>
+		<ul>
+			<li><img src="../img/index-img/logo2.png" /> <a href="#">CTGUCA</a>
+			</li>
+			<li><a href="../index.html">首页</a></li>
+			<li><a href="about.html">简介</a></li>
+			<li><a href="news.html">活动</a></li>
+			<li><a href="resource.html">资源</a></li>
+			<li><a href="register.html">加入我们</a></li>
+		</ul>
+	</header>
+		<section>
+			<div>
+				<div class="mtitle">
+					<button class="active">协会简介</button>
+					<button>协会成员</button>
+					<a href="about-detail.html" target="_blank">协会详情</a>
+				</div>
+				<article>
+					<div id="con1">
+						<h2>概述:</h2>
+						<p>
+							三峡大学计算机协会成立于2001年，她是一群热爱计算机的99级校友一手创办的，经历了17年的风风雨雨。现如今，在计算机与信息学院团委的支持下，由学生自主管理。经由历届协会领导人的努力，她逐渐发展壮大，并在探索中取得了辉煌佳绩。
+							<h2>宗旨:</h2>
+						</p>
+						<p> 以人为本，为立足高科技的新世纪而奋斗。 </p>
+						<h2>主要义务:</h2>
+						<ul>
+							<li>立志提高三峡大学学生的整体计算机水平</li>
+							<li>帮助解决同学们在使用计算机时遇到的软、硬件问题</li>
+							<li>帮助广大我校同学了解计算机新知识、新产品</li>
+							<li>为大家提供最新、最真实且最有价值的商品信息</li>
+						</ul>
+						<h2>体系结构及变更:</h2>
+						<p> 作为一个独立自主运行的社团,它有一套成熟的管理体系。 内设有会长及副会长等职务,分设技术部、组织部、秘书处、办公部、美术宣传部、编程部、建站组等七个部门,2013年新成立编程部。2018年我们再度尝试创立建站组。
+						</p>
+					</div>
+					<div id="con2">
+						<h2>会长团</h2>
+						<p id="huizhang">郑枫（正）、王蕊、黄俊杰、李汇远</p>
+						<h2>部长团</h2>
+						<dl id="buzhang">
+							<dt>秘书处</dt>
+							<dd>蒯彦兵（正）、王嘉懿、谢飞</dd>
+							<dt>办公部</dt>
+							<dd>张雨晗（正）、孙卓欣、廖宗启</dd>
+							<dt>组织部</dt>
+							<dd>缪一（正）、刘杰、吴星宇</dd>
+							<dt>美宣部</dt>
+							<dd>李子依（正）、左雪</dd>
+							<dt>技术部</dt>
+							<dd>肖元正（正）、潘硕</dd>
+							<dt>编程部</dt>
+							<dd>曾硕、刘东胜、彭宇婷</dd>
+							<dt>建站组</dt>
+							<dd>张洪源（正）、潘钦伟、吴梦霞</dd>
+						</dl>
+					</div>
+				</article>
+			</div>
+		</section>
+	<footer>
+		<ul>
+			<li>
+				<dt>常用资源</dt>
+				<dd>
+					<a
+						href="https://sm.myapp.com/original/Development/Dev-Cpp_5.11_TDM-GCC_4.9.2_Setup.exe">dev-c++</a>
+				</dd>
+				<dd>
+					<a href="http://dl-t1.wmzhe.com/30/30118/jdk_8.0.1310.11_64.exe">jdk1.8下载</a>
+				</dd>
+				<dd>
+					<a
+						href="http://wangshuo.jb51.net:81/201806/tools/eclipse_photo_win64_jb51.rar">eclipse4.8下载</a>
+				</dd>
+			</li>
+			<li>
+				<dt>关于我们</dt>
+				<dd>
+					<a href="about_detail">计协简介</a>
+				</dd>
+				<dd>
+					<a href="tel.html">联系我们</a>
+				</dd>
+				<dd>
+					<a href="#" id="a-requery">反馈建议</a>
+				</dd>
+			</li>
+			<li>
+				<dt>会员服务</dt>
+				<dd>
+					<a href="#" onclick="javascript:alert('暂未开放！');">近期讲座</a>
+				</dd>
+				<dd>
+					<a href="#" onclick="javascript:alert('暂未开放！');">近期活动</a>
+				</dd>
+				<dd>
+					<a target="_blank" href="/ctguca/luntan.html">问题解答</a>
+				</dd>
+			</li>
+			<li>
+				<dt>友情链接</dt>
+				<dd>
+					<a href="http://www.cnki.net/" data-toggle="tooltip"
+						data-placement="right" title="校内网可免费下载" target="_blank">中国知网</a>
+				</dd>
+				<dd>
+					<a href="https://www.nowcoder.com/" data-toggle="tooltip"
+						data-placement="right" title="学习资源网站" target="_blank">牛客网</a>
+				</dd>
+				<dd>
+					<a href="http://jwc.ctgu.edu.cn/fwqxztt.asp" data-toggle="tooltip"
+						data-placement="right" title="学生选课入口" target="_blank">三峡大学教务处</a>
+				</dd>
+				<dd>
+					<a href="http://210.42.41.119/" target="_blank">三峡大学图书馆</a>
+				</dd>
+			</li>
+		</ul>
+		<div>
+			<hr color="#fff" size="1.5" />
+			<p>
+				©2018--2020 CTGU CA , 三峡大学计算机协会 | All rights reserved. <a href="#"
+					id="admin-login">后台管理</a>
+			</p>
+		</div>
+	</footer>
+	<div class="me-bg"></div>
+	<div class="me-con">
+		<h4>后台管理登录</h4>
+		<lable>&Chi;</lable>
+		<form action="" method="post">
+			<input type="text" maxlength="20" placeholder="账号"
+				pattern="^([0-9a-zA-Z]{4,})$" /> <input type="password"
+				maxlength="20" placeholder="密码" pattern="^([0-9a-zA-Z]{4,})$" /> <input
+				type="submit" value="登录" />
+		</form>
+	</div>
+	<div class="me-con2">
+		<h4>反馈建议</h4>
+		<lable>&Chi;</lable>
+		<form action="#" method="post">
+			<textarea required="required"></textarea>
+			<input type="submit" value="提交">
+		</form>
+	</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,1096 @@
+﻿/*! Bootstrap v3.3.6 (http://getbootstrap.com) 
+ * bootstrap-theme 是一个开发者覆写的 Bootstrap 主题 (Override Bootstarp)*/
+
+/* 按钮组件主题样式覆盖与编写 */
+.btn {
+    -webkit-transition: all .3s ease-out;
+    -moz-transition: all .3s ease-out;
+    -ms-transition: all .3s ease-out;
+    -o-transition: all .3s ease-out;
+    transition: all .3s ease-out;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;        
+}
+
+.btn-solid{ border-bottom: 3px solid #ccc;}
+
+.btn-default,
+.btn-primary,
+.btn-success,
+.btn-info,
+.btn-warning,
+.btn-danger,
+.btn-red,
+.btn-orange,
+.btn-violet,
+.btn-purple{
+    text-shadow: 1px -1px 0 rgba(0, 0, 0, .15);
+}
+
+.btn-default:active,
+.btn-primary:active,
+.btn-success:active,
+.btn-info:active,
+.btn-warning:active,
+.btn-danger:active,
+.btn-white:active,
+.btn-red:active,
+.btn-orange:active,
+.btn-violet:active,
+.btn-purple:active,
+.btn-default.active,
+.btn-primary.active,
+.btn-success.active,
+.btn-info.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-orange.active,
+.btn-white.active,
+.btn-red.active,
+.btn-violet.active,
+.btn-orange.active,
+.btn-purple.active{
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .125);
+}
+.btn-default.disabled,
+.btn-primary.disabled,
+.btn-success.disabled,
+.btn-info.disabled,
+.btn-warning.disabled,
+.btn-danger.disabled,
+.btn-default[disabled],
+.btn-primary[disabled],
+.btn-success[disabled],
+.btn-info[disabled],
+.btn-warning[disabled],
+.btn-danger[disabled],
+fieldset[disabled] .btn-default,
+fieldset[disabled] .btn-primary,
+fieldset[disabled] .btn-success,
+fieldset[disabled] .btn-info,
+fieldset[disabled] .btn-warning,
+fieldset[disabled] .btn-danger {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+.btn-default .badge,
+.btn-primary .badge,
+.btn-success .badge,
+.btn-info .badge,
+.btn-warning .badge,
+.btn-danger .badge {
+  text-shadow: none;
+}
+.btn:active,
+.btn.active {
+    -moz-box-shadow: inset 0 2px 5px rgba(0,0,0,.125);
+    -webkit-box-shadow: inset 0 2px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 2px 5px rgba(0,0,0,.125);
+}
+.btn-default {
+  color: #606060;
+  text-shadow: 0 1px 0 #fff;
+  background-image: -webkit-linear-gradient(top, #fcfcfc 0%, #eee 100%);
+  background-image:      -o-linear-gradient(top, #fcfcfc 0%, #eee 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fcfcfc), to(#eee));
+  background-image:         linear-gradient(to bottom, #fcfcfc 0%, #eee 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcfcfc', endColorstr='#ffeeeeee', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #dadada;
+}
+.btn-default:hover,
+.btn-default:focus {
+    color: #393939;
+  background: #eaeaea;
+  background-image: -webkit-linear-gradient(#fafafa, #dedede);
+  background-image: -o-linear-gradient(#fafafa, #dedede);
+  background-image: linear-gradient(#fafafa, #dedede);
+  border-color: #ccc;
+}
+.btn-default:active,
+.btn-default.active {
+    background-color: #e0e0e0;
+    border-color: #c0c0c0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+    box-shadow: inset 0 3px 5px rgba(0,0,0,.125);
+}
+.btn-default.disabled,
+.btn-default[disabled],
+fieldset[disabled] .btn-default,
+.btn-default.disabled:hover,
+.btn-default[disabled]:hover,
+fieldset[disabled] .btn-default:hover,
+.btn-default.disabled:focus,
+.btn-default[disabled]:focus,
+fieldset[disabled] .btn-default:focus,
+.btn-default.disabled.focus,
+.btn-default[disabled].focus,
+fieldset[disabled] .btn-default.focus,
+.btn-default.disabled:active,
+.btn-default[disabled]:active,
+fieldset[disabled] .btn-default:active,
+.btn-default.disabled.active,
+.btn-default[disabled].active,
+fieldset[disabled] .btn-default.active {
+  background-color: #e0e0e0;
+  background-image: none;
+}
+.btn-primary {
+  background-image: -webkit-linear-gradient(top, #428bca 0%, #337ab7 100%);
+  background-image:      -o-linear-gradient(top, #428bca 0%, #337ab7 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#428bca), to(#337ab7));
+  background-image:         linear-gradient(to bottom, #428bca 0%, #337ab7 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff428bca', endColorstr='#ff337ab7', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-color: #3a82c0;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background: #337ab7;
+  border-color: #285e8e;
+}
+.btn-primary:active,
+.btn-primary.active {
+  background: #337ab7;
+  border-color: #2b669a;
+}
+.btn-primary.disabled,
+.btn-primary[disabled],
+fieldset[disabled] .btn-primary,
+.btn-primary.disabled:hover,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary:hover,
+.btn-primary.disabled:focus,
+.btn-primary[disabled]:focus,
+fieldset[disabled] .btn-primary:focus,
+.btn-primary.disabled.focus,
+.btn-primary[disabled].focus,
+fieldset[disabled] .btn-primary.focus,
+.btn-primary.disabled:active,
+.btn-primary[disabled]:active,
+fieldset[disabled] .btn-primary:active,
+.btn-primary.disabled.active,
+.btn-primary[disabled].active,
+fieldset[disabled] .btn-primary.active {
+  background-color: #265a88;
+  background-image: none;
+}
+
+.btn-success:hover,
+.btn-success:focus {
+  background: #4FA64F;
+  border-color: #419641;
+}
+.btn-success:active,
+.btn-success.active {
+  background-color: #52A152;
+  border-color: #419641;
+}
+.btn-success.disabled,
+.btn-success[disabled],
+fieldset[disabled] .btn-success,
+.btn-success.disabled:hover,
+.btn-success[disabled]:hover,
+fieldset[disabled] .btn-success:hover,
+.btn-success.disabled:focus,
+.btn-success[disabled]:focus,
+fieldset[disabled] .btn-success:focus,
+.btn-success.disabled.focus,
+.btn-success[disabled].focus,
+fieldset[disabled] .btn-success.focus,
+.btn-success.disabled:active,
+.btn-success[disabled]:active,
+fieldset[disabled] .btn-success:active,
+.btn-success.disabled.active,
+.btn-success[disabled].active,
+fieldset[disabled] .btn-success.active {
+  background-color: #419641;
+  background-image: none;
+}
+.btn-info {
+    background-color: #1d8b90;
+    background: -moz-linear-gradient(0% 50% 90deg,rgb(29, 139, 144) 47.02%, rgb(27, 131, 135) 100%);
+    background: -webkit-linear-gradient(90deg, rgb(29, 139, 144) 47.02%, rgb(27, 131, 135) 100%);
+    background: -webkit-gradient(linear,0% 47.02% ,100% 47.02% , color-stop(0.4702, rgb(30, 129, 134) ), color-stop(1, rgb(27, 131, 135)));
+    background: -o-linear-gradient(90deg, rgb(29, 139, 144) 47.02%, rgb(27, 131, 135) 100%);
+    background: -ms-linear-gradient(90deg, rgb(29, 139, 144) 47.02%, rgb(27, 131, 135) 100%);
+    background: linear-gradient(90deg, rgb(29, 139, 144) 47.02%, rgb(27, 131, 135) 100%);
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#16686c', endColorstr='#1d8b90' ,GradientType=0)";
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#16686c',endColorstr='#1d8b90' , GradientType=1);
+    border-color: #1d8b90;
+    filter:alpha(opacity=90);          
+    -moz-opacity: 0.9;          
+    -khtml-opacity: 0.9;          
+    opacity: 0.9;       
+    
+}
+.btn-info:hover,
+.btn-info:focus {
+    background-color: #1d8b90;
+    border-color: #197b7f;
+    filter:alpha(opacity=100);          
+    -moz-opacity: 1.0;          
+    -khtml-opacity: 1.0;          
+    opacity: 1.0; 
+}
+.btn-info:active,
+.btn-info.active {
+  background-color: #1d8b90;
+  border-color: #197b7f;
+  filter:alpha(opacity=100);          
+  -moz-opacity: 1.0;          
+  -khtml-opacity: 1.0;          
+  opacity: 1.0; 
+}
+.btn-info.active.focus, 
+.btn-info.active:focus, 
+.btn-info.active:hover, 
+.btn-info:active.focus, 
+.btn-info:active:focus, 
+.btn-info:active:hover, 
+.open>.dropdown-toggle.btn-info.focus, 
+.open>.dropdown-toggle.btn-info:focus, 
+.open>.dropdown-toggle.btn-info:hover{
+  background-color: #197b7f;
+  border-color: #1d8b90;
+}
+
+.btn-info.disabled,
+.btn-info[disabled],
+fieldset[disabled] .btn-info,
+.btn-info.disabled:hover,
+.btn-info[disabled]:hover,
+fieldset[disabled] .btn-info:hover,
+.btn-info.disabled:focus,
+.btn-info[disabled]:focus,
+fieldset[disabled] .btn-info:focus,
+.btn-info.disabled.focus,
+.btn-info[disabled].focus,
+fieldset[disabled] .btn-info.focus,
+.btn-info.disabled:active,
+.btn-info[disabled]:active,
+fieldset[disabled] .btn-info:active,
+.btn-info.disabled.active,
+.btn-info[disabled].active,
+fieldset[disabled] .btn-info.active {
+  background-color: #2aabd2;
+  background-image: none;
+}
+.btn-warning {
+    background-color: #FF9C30;
+    border-color: #e08d13;
+}
+.btn-warning:hover,
+.btn-warning:focus {
+  background-color: #D67F20;
+  background-color: #D07F20;
+}
+.btn-warning:active,
+.btn-warning.active {
+  border-color: #D07F20;
+}
+.btn-warning.disabled,
+.btn-warning[disabled],
+fieldset[disabled] .btn-warning,
+.btn-warning.disabled:hover,
+.btn-warning[disabled]:hover,
+fieldset[disabled] .btn-warning:hover,
+.btn-warning.disabled:focus,
+.btn-warning[disabled]:focus,
+fieldset[disabled] .btn-warning:focus,
+.btn-warning.disabled.focus,
+.btn-warning[disabled].focus,
+fieldset[disabled] .btn-warning.focus,
+.btn-warning.disabled:active,
+.btn-warning[disabled]:active,
+fieldset[disabled] .btn-warning:active,
+.btn-warning.disabled.active,
+.btn-warning[disabled].active,
+fieldset[disabled] .btn-warning.active {
+  background-color: #eb9316;
+  background-image: none;
+}
+
+.btn-danger.disabled,
+.btn-danger[disabled],
+fieldset[disabled] .btn-danger,
+.btn-danger.disabled:hover,
+.btn-danger[disabled]:hover,
+fieldset[disabled] .btn-danger:hover,
+.btn-danger.disabled:focus,
+.btn-danger[disabled]:focus,
+fieldset[disabled] .btn-danger:focus,
+.btn-danger.disabled.focus,
+.btn-danger[disabled].focus,
+fieldset[disabled] .btn-danger.focus,
+.btn-danger.disabled:active,
+.btn-danger[disabled]:active,
+fieldset[disabled] .btn-danger:active,
+.btn-danger.disabled.active,
+.btn-danger[disabled].active,
+fieldset[disabled] .btn-danger.active {
+  background-color: #c12e2a;
+  background-image: none;
+}
+
+/*.btn-link*/
+.btn-link:hover,
+.btn-link:focus,
+.btn-link:active:hover,
+.btn-link:active:focus{ outline: none;}
+
+/*设置超小尺寸按钮属性*/
+.btn-group-xs>.btn, 
+.btn-xs{padding: 1px 6px; font-size: inherit;}
+
+/*缩略图组件*/
+.thumbnail,
+.img-thumbnail {
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+          box-shadow: 0 1px 2px rgba(0, 0, 0, .075);
+}
+
+/*下拉菜单组件*/
+.dropdown-menu {
+    border-color: #dedede;
+}
+.dropdown-header,
+.dropdown-menu > li > a,
+.dropdown-menu > li > .title {
+    padding: 4px 20px;
+}
+.dropdown-menu > li > .title{
+    display: block;
+}
+.dropdown-header{font-size: 1em; font-size: inherit;}
+.dropdown-menu > li.focus > a,
+.dropdown-menu > li.focus > .title,
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  background-color: #e8e8e8;
+}
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+  background-color: #2e6da4;
+}
+.dropdown-menu .divider {
+    margin: 6px 0;
+}
+
+.dropdown-toggle ~ .dropdown-menu li.selected a{
+    background: #e8e8e8;
+}
+
+/*导航组件*/
+.navbar-transparent {
+    background: transparent;
+    border-bottom-color: rgba(0, 0, 0, .1);
+}
+.navbar-transparent .navbar-collapse{
+    border-top-color: rgba(0, 0, 0, .1);
+}
+.navbar-transparent .navbar-toggle,
+.navbar-transparent .navbar-nav > li > a {
+    color: #fff;
+    filter:alpha(opacity=90); /* IE */  
+    -moz-opacity:0.9; /* 老版Mozilla */  
+    -khtml-opacity:0.9; /* 老版Safari */  
+    opacity: 0.9; /* 支持opacity的浏览器*/
+}
+.navbar-transparent .nav > li > a:hover,
+.navbar-transparent .nav .open>a,
+.navbar-transparent .nav .open>a:focus, 
+.navbar-transparent .nav .open>a:hover,
+.navbar-transparent .nav > .active > a {
+    background-color: rgba(0, 0, 0, .1);
+    filter: alpha(opacity=100); /* IE */
+    -moz-opacity: 1.0; /* 老版Mozilla */  
+    -khtml-opacity: 1.0; /* 老版Safari */  
+    opacity: 1.0; /* 支持opacity的浏览器*/
+}
+
+.navbar-transparent .navbar-toggle {
+    background-color: rgba(0, 0, 0, .1);
+}
+.navbar-transparent .navbar-toggle .icon-bar {
+    background-color: #fafafa;
+}
+
+.navbar-default,
+.navbar-transparent.affix{
+  background-image: -webkit-linear-gradient(top, #fff 0%, #f8f8f8 100%);
+  background-image:      -o-linear-gradient(top, #fff 0%, #f8f8f8 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#f8f8f8));
+  background-image:         linear-gradient(to bottom, #fff 0%, #f8f8f8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 5px rgba(0, 0, 0, .075);
+}
+.navbar-default .navbar-nav > .open > a,
+.navbar-default .navbar-nav > .active > a {
+  background-image: -webkit-linear-gradient(top, #dbdbdb 0%, #e2e2e2 100%);
+  background-image:      -o-linear-gradient(top, #dbdbdb 0%, #e2e2e2 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dbdbdb), to(#e2e2e2));
+  background-image:         linear-gradient(to bottom, #dbdbdb 0%, #e2e2e2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdbdbdb', endColorstr='#ffe2e2e2', GradientType=0);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .075);
+}
+
+.navbar-inverse {
+  background-image: -webkit-linear-gradient(top, #3c3c3c 0%, #222 100%);
+  background-image:      -o-linear-gradient(top, #3c3c3c 0%, #222 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3c3c3c), to(#222));
+  background-image:         linear-gradient(to bottom, #3c3c3c 0%, #222 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff3c3c3c', endColorstr='#ff222222', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+  border-radius: 4px;
+}
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .active > a {
+  background-image: -webkit-linear-gradient(top, #080808 0%, #0f0f0f 100%);
+  background-image:      -o-linear-gradient(top, #080808 0%, #0f0f0f 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#080808), to(#0f0f0f));
+  background-image:         linear-gradient(to bottom, #080808 0%, #0f0f0f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff080808', endColorstr='#ff0f0f0f', GradientType=0);
+  background-repeat: repeat-x;
+  -webkit-box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
+          box-shadow: inset 0 3px 9px rgba(0, 0, 0, .25);
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+    color: #e9e9e9;
+}
+
+.navbar-static-top,
+.navbar-fixed-top,
+.navbar-fixed-bottom {
+    border-radius: 0;
+    z-index: 990;
+}
+
+.navbar-brand {
+    font-size: 0;
+    min-width: 156px;
+    background: url('../../images/logo_qisharp.png') no-repeat left center;
+}
+
+.navbar-transparent .navbar-brand {
+    background-image: url('../../images/logo_qisharp_white.png') 
+}
+.navbar-transparent.affix .navbar-brand {
+    background-image: url('../../images/logo_qisharp.png') 
+}
+
+.navbar-fixed-top ~ .app-content{
+    padding-top: 50px;
+}
+.content-top-inverse {
+    margin-top: -50px;
+}
+
+/*折叠*/
+[data-toggle='collapse'].collapsed > .fa-chevron-up {
+    vertical-align: middle;
+    -moz-transform: scaleY(-1);
+    -webkit-transform: scaleY(-1);
+    -o-transform: scaleY(-1);
+    -ms-transform: scaleY(-1);
+    transform: scaleY(-1);
+    filter: FlipV();
+}
+
+/*设置小尺寸导航条*/
+.nav.sm >li >a{
+   padding: 5px 15px; 
+}
+
+/* 导航组件多媒体样式查询*/
+@media (max-width: 767px) {
+  .navbar .navbar-nav .open .dropdown-menu > .active > a,
+  .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
+  .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
+    color: #fff;
+    background-image: -webkit-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
+    background-image:      -o-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#2e6da4));
+    background-image:         linear-gradient(to bottom, #337ab7 0%, #2e6da4 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
+    background-repeat: repeat-x;
+  }
+}
+
+/*进度条组件*/
+.progress {
+  background-image: -webkit-linear-gradient(top, #ebebeb 0%, #f5f5f5 100%);
+  background-image:      -o-linear-gradient(top, #ebebeb 0%, #f5f5f5 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ebebeb), to(#f5f5f5));
+  background-image:         linear-gradient(to bottom, #ebebeb 0%, #f5f5f5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffebebeb', endColorstr='#fff5f5f5', GradientType=0);
+  background-repeat: repeat-x;
+}
+.progress-bar {
+  background-image: -webkit-linear-gradient(top, #337ab7 0%, #286090 100%);
+  background-image:      -o-linear-gradient(top, #337ab7 0%, #286090 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#286090));
+  background-image:         linear-gradient(to bottom, #337ab7 0%, #286090 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff286090', GradientType=0);
+  background-repeat: repeat-x;
+}
+.progress-bar-success {
+  background-image: -webkit-linear-gradient(top, #5cb85c 0%, #449d44 100%);
+  background-image:      -o-linear-gradient(top, #5cb85c 0%, #449d44 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5cb85c), to(#449d44));
+  background-image:         linear-gradient(to bottom, #5cb85c 0%, #449d44 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff449d44', GradientType=0);
+  background-repeat: repeat-x;
+}
+.progress-bar-info {
+  background-image: -webkit-linear-gradient(top, #5bc0de 0%, #31b0d5 100%);
+  background-image:      -o-linear-gradient(top, #5bc0de 0%, #31b0d5 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5bc0de), to(#31b0d5));
+  background-image:         linear-gradient(to bottom, #5bc0de 0%, #31b0d5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5bc0de', endColorstr='#ff31b0d5', GradientType=0);
+  background-repeat: repeat-x;
+}
+.progress-bar-warning {
+  background-image: -webkit-linear-gradient(top, #f0ad4e 0%, #ec971f 100%);
+  background-image:      -o-linear-gradient(top, #f0ad4e 0%, #ec971f 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f0ad4e), to(#ec971f));
+  background-image:         linear-gradient(to bottom, #f0ad4e 0%, #ec971f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff0ad4e', endColorstr='#ffec971f', GradientType=0);
+  background-repeat: repeat-x;
+}
+.progress-bar-danger {
+  background-image: -webkit-linear-gradient(top, #d9534f 0%, #c9302c 100%);
+  background-image:      -o-linear-gradient(top, #d9534f 0%, #c9302c 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9534f), to(#c9302c));
+  background-image:         linear-gradient(to bottom, #d9534f 0%, #c9302c 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9534f', endColorstr='#ffc9302c', GradientType=0);
+  background-repeat: repeat-x;
+}
+.progress-bar-striped {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:      -o-linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+  background-image:         linear-gradient(45deg, rgba(255, 255, 255, .15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, .15) 50%, rgba(255, 255, 255, .15) 75%, transparent 75%, transparent);
+}
+
+/*列表组组件*/
+.list-group {
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    -moz-box-shadow: 1px 1px 2px rgba(0, 0, 0, .05);
+    -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, .05);
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, .05);
+}
+.list-group-item {
+    border-color: #e6e6e6;
+}
+.list-group-item:first-child{border-top-left-radius: 3px; border-top-right-radius: 3px;}
+.list-group-item:last-child{ border-bottom-right-radius: 3px;border-bottom-left-radius: 3px;}
+.list-group-item.active,
+.list-group-item.active:hover,
+.list-group-item.active:focus {
+  text-shadow: 0 -1px 0 #286090;
+  background-image: -webkit-linear-gradient(top, #337ab7 0%, #2b669a 100%);
+  background-image:      -o-linear-gradient(top, #337ab7 0%, #2b669a 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#2b669a));
+  background-image:         linear-gradient(to bottom, #337ab7 0%, #2b669a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2b669a', GradientType=0);
+  background-repeat: repeat-x;
+  border-color: #2b669a;
+}
+.list-group-item.active .badge,
+.list-group-item.active:hover .badge,
+.list-group-item.active:focus .badge {
+  text-shadow: none;
+}
+
+/*徽章组件*/
+.badge-sm{ padding: 2px 5px;}
+.badge-muted{ background-color: #9f9f9f;}
+.badge-success{ background-color: #4FA64F;}
+.badge-warning{ background-color: #f39c12;}
+.badge-danger{ background-color: #ef5350;}
+
+/*标签组件*/
+.label-sm{ padding: 2px 6px;}
+.label-transparent{ background-color: transparent !important; font-family: Swisz,Georgia,serif; font-size: 16px; color: #999; }
+
+/*设置警告框向下的外边距*/
+.alert {
+    margin-bottom: 15px;
+    -moz-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .025);
+    -webkit-box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .025);
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, .025);
+}
+.alert-sm {
+    margin-bottom: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px
+}
+
+/*面板组件*/
+.panel {
+    margin-bottom: 10px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;    
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.1);
+}
+.panel-default,
+.panel-primary,
+.panel-success,
+.panel-info,
+.panel-warning,
+.panel-danger{
+    -moz-box-shadow: -1px 0 3px rgba(0, 0, 0, .045), 1px 0 3px rgba(0, 0, 0, .045), 0 -1px 1px rgba(0, 0, 0, .005), 0 1px 5px rgba(0, 0, 0, .055);
+    -webkit-box-shadow: -1px 0 3px rgba(0, 0, 0, .045), 1px 0 3px rgba(0, 0, 0, .045), 0 -1px 1px rgba(0, 0, 0, .005), 0 1px 5px rgba(0, 0, 0, .055);
+    box-shadow: -1px 0 3px rgba(0, 0, 0, .045), 1px 0 3px rgba(0, 0, 0, .045), 0 -1px 1px rgba(0, 0, 0, .005), 0 1px 5px rgba(0, 0, 0, .055);
+}
+.panel-default {
+    border-color: #dfdfdf;
+}
+.panel-default > .panel-heading {
+  background-image: -webkit-linear-gradient(top, #ffffff 0%, #f8f8f8 100%);
+  background-image:      -o-linear-gradient(top, #ffffff 0%, #f8f8f8 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f8f8f8));
+  background-image:         linear-gradient(to bottom, #ffffff 0%, #f8f8f8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff', endColorstr='#fff8f8f8', GradientType=0);
+  background-repeat: repeat-x;
+}
+.panel-primary > .panel-heading {
+  background-image: -webkit-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
+  background-image:      -o-linear-gradient(top, #337ab7 0%, #2e6da4 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#2e6da4));
+  background-image:         linear-gradient(to bottom, #337ab7 0%, #2e6da4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff337ab7', endColorstr='#ff2e6da4', GradientType=0);
+  background-repeat: repeat-x;
+}
+.panel-success > .panel-heading {
+  background-image: -webkit-linear-gradient(top, #dff0d8 0%, #d0e9c6 100%);
+  background-image:      -o-linear-gradient(top, #dff0d8 0%, #d0e9c6 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#dff0d8), to(#d0e9c6));
+  background-image:         linear-gradient(to bottom, #dff0d8 0%, #d0e9c6 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffdff0d8', endColorstr='#ffd0e9c6', GradientType=0);
+  background-repeat: repeat-x;
+}
+.panel-info > .panel-heading {
+  background-image: -webkit-linear-gradient(top, #d9edf7 0%, #c4e3f3 100%);
+  background-image:      -o-linear-gradient(top, #d9edf7 0%, #c4e3f3 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#d9edf7), to(#c4e3f3));
+  background-image:         linear-gradient(to bottom, #d9edf7 0%, #c4e3f3 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffd9edf7', endColorstr='#ffc4e3f3', GradientType=0);
+  background-repeat: repeat-x;
+}
+.panel-warning > .panel-heading {
+  background-image: -webkit-linear-gradient(top, #fcf8e3 0%, #faf2cc 100%);
+  background-image:      -o-linear-gradient(top, #fcf8e3 0%, #faf2cc 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fcf8e3), to(#faf2cc));
+  background-image:         linear-gradient(to bottom, #fcf8e3 0%, #faf2cc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffcf8e3', endColorstr='#fffaf2cc', GradientType=0);
+  background-repeat: repeat-x;
+}
+.panel-danger > .panel-heading {
+  background-image: -webkit-linear-gradient(top, #f2dede 0%, #ebcccc 100%);
+  background-image:      -o-linear-gradient(top, #f2dede 0%, #ebcccc 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2dede), to(#ebcccc));
+  background-image:         linear-gradient(to bottom, #f2dede 0%, #ebcccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2dede', endColorstr='#ffebcccc', GradientType=0);
+  background-repeat: repeat-x;
+}
+
+/*重置 .nav-tabs 选项卡标签的边框颜色属性*/
+.nav-tabs{border-bottom-color: #e7eaec; }
+.nav-tabs>li.active>a, 
+.nav-tabs>li.active>a:focus, 
+.nav-tabs>li.active>a:hover{ border-color: #dfdfdf; border-bottom-color: transparent;}
+
+/*重置 .nav-tabs 选项卡标签的内边距属性*/
+.nav-tabs>li>a{ margin-right: 0;}
+.nav-tabs>li>a:focus{ outline: none;}
+
+/*设置不同主题色选项卡标签激活样式*/
+.nav-tabs.tabs-orange>li.active>a,
+.nav-tabs.tabs-success>li.active>a,
+.nav-tabs.tabs-danger>li.active>a{margin-top: -1px;border-top-width: 2px;}
+
+.nav-tabs.tabs-orange>li.active>a{margin-top: -1px;border-top-width: 2px; border-top-color: #f40;}
+.nav-tabs.tabs-success>li.active>a{margin-top: -1px;border-top-width: 2px; border-top-color: #3c763d;}
+.nav-tabs.tabs-danger>li.active>a{margin-top: -1px;border-top-width: 2px; border-top-color: #d9534f;}
+
+/*设置 panle-heading.border-bottom 的样式*/
+.panel-heading.bordered{margin: 0; border-bottom: 1px solid #e9eaec; -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, .05); box-shadow: 0 2px 5px rgba(0, 0, 0, .05);}
+.panel-heading hr{ margin-bottom: -5px !important; border-bottom: 1px solid #f5f6f7; }
+
+.panel-heading .navbar-nav>li>a,
+.panel-body .navbar-nav>li>a{padding: 0 4px 0 5px; -moz-border-radius: 4px; -webkit-border-radius: 4px; border-radius: 4px;}
+.panel-body .navbar-nav>li>a{ padding-top: 1px;padding-bottom: 1px;}
+
+.panel-heading .navbar-nav>li>a:focus,
+.panel-body .navbar-nav>li>a:focus{ background-color: transparent;}
+
+.panel-heading .navbar-nav>li>a:focus:hover,
+.panel-heading .navbar-nav>li>a:hover,
+.panel-body .navbar-nav>li>a:focus:hover,
+.panel-body .navbar-nav>li>a:hover{ background-color: #eee;}
+
+/*重置 panel-footer 的背景属性*/
+.panel-footer{ background-color: #f9f9f9;}
+
+/*重置 .panel-body.well*/ 
+.panel-body.well{ margin: -1px;border-left-width: 0; border-right-width: 0; -moz-border-radius: 0; -webkit-border-radius: 0; border-radius: 0;}
+
+/*重置小尺寸的 panel-body*/
+.panel-sm .panel-body{ padding-top: 12px; padding-bottom: 12px;}
+
+/*重置超小尺寸的 panel-body*/
+.panel-xs .panel-body,
+.panel-xs .panel-footer{padding-top: 8px; padding-bottom: 8px;}
+
+/*设置小尺寸的选项卡标签内边距*/
+.nav-tabs.sm > li > a{
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+/*设置 tab-content.panel 的样式*/
+.tab-content.panel{ margin-top: -1px;}
+.tab-content.panel-default{ border-top-color: #dfdfdf;}
+
+/*设置 list-group 样式*/
+.list-group>li{ border-bottom: 1px dotted #d5d5d5; }
+.list-group>li.last{ border-bottom: none; }
+
+.list-group.group-sm .list-group-item{ padding-top: 5px;padding-bottom: 5px;}
+
+.well {margin-bottom: 15px; background-color: #f9f9f9; border-color: #e7e8e9;}
+.well-sm {margin-bottom: 10px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
+.well-xs {padding: 4px; margin-bottom: 10px; -moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px; }
+
+/*新写一个 label-default 组件样式*/
+.label{ padding-top: .25em;}
+
+.label-default{ background-color: #a9a9a9;}
+.label-white{ background-color: #fff; color: #999;}
+.label-white.active{ color: #333;}
+
+.label-outline{border: 1px dotted;}
+.label-outline.text-muted{ color: #999 !important;}
+.label-outline.text-primary{color: #337ab7;}
+.label-outline.text-success{ color: #3c763d;}
+
+/*重置 .close 的不透明度*/
+.close{font-weight: 600; filter: alpha(opacity=45); -moz-opacity: 0.45; -khtml-opacity: 0.45; opacity: 0.45;}
+.close:hover, 
+.close:focus{filter: alpha(opacity=75); -moz-opacity: 0.75; -khtml-opacity: 0.75; opacity: 0.75; text-shadow: 0 1px 0 rgba(0,0,0,.33);}
+
+.alert-dismissable .close, 
+.alert-dismissible .close,
+.alert-dismissable .close:hover,
+.alert-dismissible .close:hover,
+.alert-dismissable .close:focus,
+.alert-dismissible .close:focus {color: inherit;}
+
+/*警告框组件*/
+.alert-default {
+    background-color: #fff;
+    border-color: #d4d4d4;
+    border-top-color: #dfdfdf;
+}
+.alert-info {
+     border-color: #cce8f1;
+}
+
+/*轮播组件*/
+.carousel-indicators{ bottom: 15px;}
+.carousel-indicators li {
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -ms-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    background: url("../images/bg_control_nav.png") no-repeat scroll 0 0 transparent;
+    _background: url("../images/bg_control_nav.png") no-repeat scroll 0 0 transparent;
+    border: none;
+}
+.carousel-indicators li:hover,
+.carousel-indicators li:focus{
+    background-position: 0 -10px;
+}
+.carousel-indicators li.active,
+.carousel-indicators li:active {
+    margin: 1px;
+    width: 10px;
+    height: 10px;
+    background-color: transparent;
+    background-position: 0 -20px;
+    cursor: default;
+}
+
+
+/*一些基础元素重置*/
+blockquote{ font-size: 16px;}
+label, dl {margin-bottom: 0;}
+dt{ font-weight: normal;}
+hr.md{ margin-top: 15px;margin-bottom: 15px;}
+hr.sm{ margin-top: 10px;margin-bottom: 10px;}
+.control-label{ margin-bottom: 2px;}
+.breadcrumb{ margin-bottom: 15px; background-color: #f8f8f8; text-shadow: 0 1px 0 #fff;}
+
+/*重置 legend 的底部间距与字体样式*/
+legend{ margin-bottom: 15px;font-size: 1.07em;}
+fieldset.well legend {display: inline; width: auto; margin-bottom: 0; border-bottom-width: 0;}
+
+fieldset.well,
+.panel-body.well{ background-color: rgb(250, 250, 250);}
+
+.dl-horizontal dt{ font-weight: normal; color: #909090;}
+.dl-horizontal dd{ margin-bottom: 10px;}
+
+/*情景背景的间距等样式改写*/
+.bg-primary,
+.bg-success,
+.bg-info,
+.bg-warning,
+.bg-danger{ padding: 0 1px;}
+
+/*编写不同程度的文本样式*/
+.text-muted{ color: #878787 !important;}
+/*.text-primary{ color: #428bca !important;}
+.text-success{ color: #3c763d !important;}
+.text-info{ color: #31708f !important;}
+.text-warning{ color: #8a6d3b !important;}
+.text-danger{ color: #a94442 !important;}*/
+
+/*新定义的一个只有轮廓边框的表格*/
+.table-outline{ border: 1px solid transparent;}
+
+/*重置表格的下外间距*/
+.table{ margin-bottom: 15px;}
+.table>thead>tr>th{
+  background-image: -webkit-linear-gradient(top, #f6f8f8 0%, #f2f3f4 100%);
+  background-image: -o-linear-gradient(top, #f6f8f8 0%, #f2f3f4 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f8f8), to(#f2f3f4));
+  background-image: linear-gradient(to bottom, #f6f8f8 0%, #f2f3f4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff6f8f8', endColorstr='#fff2f3f4', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  background-repeat: repeat-x;
+}
+.table-striped>tbody>tr:nth-of-type(odd){
+	background-color: transparent;
+}
+.table-striped>tbody>tr:nth-of-type(even){
+	background-color: #f9f9f9;
+}
+
+/*设置一个表格的单元格只有底部边框的样式*/
+.table-bordered-bottom{border: 1px solid #dfdfdf;}
+
+.table-bordered-bottom>tbody>tr>td, 
+.table-bordered-bottom>tbody>tr>th, 
+.table-bordered-bottom>tfoot>tr>td, 
+.table-bordered-bottom>tfoot>tr>th, 
+.table-bordered-bottom>thead>tr>td, 
+.table-bordered-bottom>thead>tr>th{ border-bottom: 1px solid #dfdfdf;}
+
+/*重置表格单元格的边框、垂直居中样式*/
+.table-outline,
+.table>tbody>tr>td, 
+.table>tbody>tr>th, 
+.table>tfoot>tr>td, 
+.table>tfoot>tr>th, 
+.table>thead>tr>td, 
+.table>thead>tr>th {border-color: #dfdfdf; vertical-align: middle;}
+.table>thead>tr>th{ border-bottom-width: 1px;}
+
+/*重置表格中 thead 单元格的字体、边框、背景样式*/
+.table-bordered>thead>tr>th, 
+.table-bordered-bottom>thead>tr>th, 
+.table-bordered>thead>tr>td,
+.table-bordered-bottom>thead>tr>td {
+    font-weight: normal;
+    color: #1f1f1f;
+    border-bottom-width: 1px;
+    background-color: #f5f5f5;
+    background-image: -moz-linear-gradient(top,#fff,#f5f5f5);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#f5f5f5));
+    background-image: -webkit-linear-gradient(top,#fff,#f5f5f5);
+    background-image: -o-linear-gradient(top,#fff,#f5f5f5);
+    background-image: linear-gradient(to bottom,#fff,#f5f5f5);
+    background-repeat: repeat-x;
+}
+
+/*带边框的紧缩表格的内边距设置*/
+.table-outline.table-condensed > thead > tr > th, 
+.table-outline.table-condensed > tbody > tr > th, 
+.table-outline.table-condensed > tfoot > tr > th, 
+.table-outline.table-condensed > thead > tr > td, 
+.table-outline.table-condensed > tbody > tr > td, 
+.table-outline.table-condensed > tfoot > tr > td,
+.table-bordered.table-condensed > thead > tr > th, 
+.table-bordered.table-condensed > tbody > tr > th, 
+.table-bordered.table-condensed > tfoot > tr > th, 
+.table-bordered.table-condensed > thead > tr > td, 
+.table-bordered.table-condensed > tbody > tr > td, 
+.table-bordered.table-condensed > tfoot > tr > td{ padding: 5px 8px;}
+
+/*分页输出栏 start*/
+.pagerbar .pagination-detail,
+.pagerbar .pagination{margin-top: 10px; margin-bottom: 10px;}
+
+.pagerbar .pagination-detail{line-height: 32px; margin-right: 2px;}
+
+.pagination[data-align^=right]{float: right;}
+
+.pagination > .disabled > span, 
+.pagination > .disabled > span:hover, 
+.pagination > .disabled > span:focus, 
+.pagination > .disabled > a, 
+.pagination > .disabled > a:hover, 
+.pagination > .disabled > a:focus{ color: #989898;cursor: default;}
+
+/*重置小尺寸 form-griup 下外间距*/
+.form-group.form-group-sm{ margin-bottom: 12px;}
+
+/*重置作为额外元素的按钮的字体继承样式*/
+.input-group .input-group-addon{ background-color: #e5e5e5;}
+.input-group-addon.addon-default{border: none; background: none;}
+.input-group-btn{ font-size: inherit;}
+
+/*重置默认尺寸或小尺寸上下文中输入框标签、输入框、按钮的字体继承样式*/
+.btn,
+.btn-sm, 
+.btn-group-sm > .btn,
+.form-control, 
+.form-group-sm .form-control,
+.form-control-static,
+.form-group-sm .form-control-static,
+.input-group-sm > .form-control, 
+.input-group-sm > .input-group-addon, 
+.input-group-sm > .input-group-btn > .btn,
+.control-label,
+.form-group-sm .control-label,
+.form-horizontal .form-group-sm .control-label{ font-size: .9375em; vertical-align: middle;}
+
+.btn-lg, .btn-gorup-lg > .btn{ font-size: 100%;}
+
+/*重置默认尺寸或小尺寸上下文中输入框与按钮的圆角值*/
+.form-group-sm .form-control,
+.btn-group-sm > .btn, 
+.btn-sm{-moz-border-radius: 2px; -webkit-border-radius: 2px; border-radius: 2px;}
+
+/*重置小尺寸上下文中按钮的高度与内间距*/
+.btn-group-sm > .btn, 
+.btn-sm{height: 28px; padding: 3px 12px 2px;}
+
+.input-group-btn.btn-group-sm > .btn,
+.input-group-btn> .btn-sm{ padding: 0 10px;}
+
+/*重置小尺寸上下文中靠左按钮的外间距与内间距*/
+.btn-group-sm > .btn.btn-left, 
+.btn-sm.btn-left{ margin-left: 0;padding: 0 8px;}
+.btn-group-sm > .btn.btn-right, 
+.btn-sm.btn-right{ margin-right: 0;padding: 0 8px;}
+
+/*重置小尺寸下文中输入框、额外元素及按钮的高度与内间距*/
+.input-sm,
+.form-group-sm .form-control,
+.input-group-sm > .form-control, 
+.input-group-sm > .input-group-addon, 
+.input-group-sm > .input-group-btn > .btn{height: 28px; padding: 3px 8px;}
+
+/*重置小尺寸上下文中静态文本的内间距*/
+.form-group-sm .form-control-static,
+.form-control-static.sm,
+.form-control-static.small{padding: 4px 1px; height: 26px; min-height: 28px;}
+.form-control-static.small{ font-size: 85%;}
+
+/*重置输入框及其额外元素的边框样式*/
+.input-group-addon{ border-color: #dcdcdc;}
+.input-group-addon.last{border-left: 0;}
+
+/*重置输入框额外元素的颜色继承、圆角样式*/
+.input-group-addon{ color: inherit; border-radius: 2px;}
+a.input-group-addon:hover,
+a.input-group-addon:focus,
+a.input-group-addon:active{ text-decoration: none;}
+
+/*重置 .form-control 的行内样式 */
+.form-control {display: inline-block; border-color: #dcdcdc;}
+.form-control:focus {
+    border-color: #99BBF2;
+    -moz-box-shadow: inset 0 1px 1px #f2f3f4, 0 0 8px rgba(173, 216, 230, 1);
+    -webkit-box-shadow: inset 0 1px 1px #f2f3f4, 0 0 8px rgba(173, 216, 230, 1);
+    box-shadow: inset 0 1px 1px #f2f3f4, 0 0 8px rgba(173, 216, 230, 1);
+}
+textarea.form-control {
+    letter-spacing: normal;
+    word-spacing: normal;
+    zoom: 1;
+}
+.form-control.edui-default {
+     padding: 0;
+     height: auto;
+     border: none;
+}
+
+/*重置多媒体布局的上外间距*/
+.media.media-group-sm{ margin-top: 10px;}
+.media.media-group-xs{ margin-top: 8px;}
+
+/*自定义的 tooltip 主题样式 */
+.tooltip{ font-family: inherit;}
+.tooltip .tooltip-inner{ min-width: 4em;}
+.tip-default .tooltip .tooltip-inner{ background-color: darkgray;}
+.tip-default .tooltip.left .tooltip-arrow{ border-left-color: darkgray;}
+.tip-default .tooltip.top .tooltip-arrow{ border-top-color: darkgray;}
+.tip-default .tooltip.right .tooltip-arrow{ border-right-color: darkgray;}
+.tip-default .tooltip.bottom .tooltip-arrow{ border-bottom-color: darkgray;}
+
+.tip-danger .tooltip .tooltip-inner{ background-color: #d9534f;}
+.tip-danger .tooltip.left .tooltip-arrow{ border-left-color: #d9534f;}
+.tip-danger .tooltip.top .tooltip-arrow{ border-top-color: #d9534f;}
+.tip-danger .tooltip.right .tooltip-arrow{ border-right-color: #d9534f;}
+.tip-danger .tooltip.bottom .tooltip-arrow{ border-bottom-color: #d9534f;}
+
+/*多媒体查询*/
+@media (max-width: 480px) {
+    .navbar-brand {
+        max-width: 256px;
+    }
+}
+
+@media (min-width: 768px) {
+    /* 普屏下内联表单中的布局处理 */
+    .form-search.form-inline .form-group{ margin-right: 8px;}
+    .form-search.form-inline .form-group:last-child{ margin-right: 0;}
+
+    .form-inline .form-group.form-group-sm{ margin-bottom: 5px;}
+    .form-inline .form-group .col-sm-2,
+    .form-inline .form-group .col-md-2,
+    .form-horizontal .form-group .col-sm-2,
+    .form-horizontal .form-group .col-md-2{ max-width: 144px;}
+
+    .form-inline .form-group .col-sm-2 ~ .col-sm-10,
+    .form-horizontal .form-group .col-sm-2 ~ .col-sm-10{ padding-left: 0;}
+    
+    /*重置水平表单或内联表单中输入框标签的内间距的值*/
+    .form-group-sm .control-label{ padding-top: 4px !important; vertical-align: baseline;}
+
+    .dl-horizontal dt{ width: 144px;}
+    .dl-horizontal dd{ margin-left: 164px;}
+}
+/* bootstrap css 改写结束 */

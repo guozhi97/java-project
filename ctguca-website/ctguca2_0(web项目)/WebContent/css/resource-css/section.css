@@ -1,0 +1,68 @@
+section{
+	height: 550px;
+	min-height: 550px;
+	background-image: url(../../img/resource-img/sec-bg.jpg);
+	background-size:cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+section>a{
+	font-size: 18px;
+    border-radius: 6px;
+    color: #eee;
+    background-color: #5bc0de;
+    border:1px solid #46b8da;
+    width: 108px;
+    padding: 8px 15px 8px 15px;
+    height: 24px;
+    position: absolute;
+    left: 300px;
+    top: 150px;
+    text-align: center;
+}
+section>div{
+	position: absolute;
+	display: none;
+	left: 450px;
+	padding: 10px;
+	top: 150px;
+	width: 500px;
+	height: 100px;
+	opacity: 0.7;
+	background-color: #333333;
+	color: #FFFFFF;
+	border: 1px solid #000000;
+	border-radius: 5px;
+}
+section>div>p{
+	text-indent: 1em;
+	line-height: 30px;
+	font-size: 16px;
+}
+section>a:hover{
+	background-color: #46b8da;
+}
+section>a:hover+div{
+	display: block;
+	animation: drop .25s, 100ms ease-in-out ;
+	animation-fill-mode: forwards;
+}
+@keyframes drop{
+	from{height: 0px;}
+	to{height: 100px;}
+}
+
+
+section>a:nth-of-type(2){
+	top: 220px;
+}
+section>div:nth-of-type(2){
+	top: 220px;
+}
+
+section>a:last-of-type{
+	top: 290px;
+}
+section>div:nth-of-type(3){
+	top: 290px;
+}

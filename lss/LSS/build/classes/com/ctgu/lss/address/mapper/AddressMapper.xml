@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ctgu.lss.address.dao.AddressDao">
+
+	<!-- 为了返回list 类型而定义的returnMap -->
+	<resultMap type="Address" id="AddressList">
+		<id column="address_id" property="address_id" />
+		<id column="user_id" property="user_id" />
+		<result column="reader_name" property="reader_name" />
+		<result column="address_name" property="address_name" />
+		<result column="mobile" property="mobile" />
+		<result column="isValid" property="isValid" />
+	</resultMap>
+	<select id="findById" parameterType="String" resultType="Address">
+		select * from
+		t_address where address_id = #{address_id}
+	</select>
+
+	<select id="findAllByCustomerId" parameterType="Integer" resultMap="AddressList">
+		select * from t_address where user_id=#{user_id} order by address_id desc
+	</select>
+
+	<select id="getAllCount" resultType="Integer">
+		select count(*) from
+		t_address
+	</select>
+	
+	<insert id="doInsert" parameterType="Address" >
+		insert into t_address(user_id,reader_name,address,mobile,isValid)
+		values(#{user_id},#{reader_name},#{address},#{mobile},#{isValid})
+	</insert>
+	
+	<update id="doUpdate" parameterType="Address">
+		update
+		t_address set
+		user_id=#{user_id},reader_name=#{reader_name},address=#{address},mobile=#{mobile},
+		isValid=#{isValid} where address_id=#{address_id}
+	</update>
+
+	<delete id="doDelete" parameterType="String">
+		delete from t_address
+		where
+		address_id = #{address_id}
+	</delete>
+
+</mapper>

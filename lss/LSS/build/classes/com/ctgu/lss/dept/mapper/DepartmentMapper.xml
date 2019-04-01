@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ctgu.lss.dept.dao.DepartmentDao">
+
+    <cache readOnly="true" eviction="FIFO" ></cache>
+	<!-- 为了返回list 类型而定义的returnMap -->
+	<resultMap type="Department" id="DepartmentList">
+		<id column="dept_id" property="dept_id" />
+		<result column="dept_name" property="dept_name" />
+	</resultMap>
+	
+
+	<select id="findById" resultType="Department">
+		select * from t_dept where dept_id = #{dept_id}
+	</select>
+	
+	
+	<select id="findAll" resultMap="DepartmentList">
+		select * from t_dept
+	</select>
+
+
+</mapper>

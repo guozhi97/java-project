@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ctgu.lss.order.dao.OrderDao">
+
+    <cache readOnly="true" eviction="FIFO" ></cache>
+	<!-- 为了返回list 类型而定义的returnMap -->
+	<resultMap type="Order" id="OrderList">
+		<id column="order_id" property="order_id" />
+		<result column="user_id" property="user_id" />
+		<result column="address_id" property="address_id" />
+		<result column="deliv_start" property="deliv_start" />
+		<result column="deliv_end" property="deliv_end" />
+		<result column="deliv_status" property="deliv_status" />
+		<result column="create_time" property="create_time" />
+		<result column="finish_time" property="finish_time" />
+		<result column="comment" property="comment" />
+	</resultMap>
+	
+
+	<select id="findById" parameterType="String" resultType="Order">
+		select
+		*
+		from t_order where order_id=#{order_id}
+	</select>
+	
+	<select id="findAll" resultMap="OrderList">
+		select * from t_order
+	</select>
+
+	<select id="findAllOrderByCustomerId" parameterType="String"
+		resultMap="OrderList" useCache="true">
+		select * from t_order where user_id =
+		#{user_id}
+	</select>
+
+	<select id="getAllCount" parameterType="Integer" resultType="Integer">
+		select count(*) from t_order
+	</select>
+
+	
+	
+	
+	<!--对于自增长的对象，如果不设定主键值，那么就使用如下的属性配置 useGeneratedKeys="true" keyProperty="id" -->
+	<insert id="doInsert" parameterType="Order">
+		insert into
+		t_order(order_id,user_id,address_id,deliv_start,deliv_end,deliv_user,orders_status,create_time,finish_time,comment)
+		values(#{order_id},#{user_id},#{address_id},#{deliv_start},#{deliv_end},#{deliv_user},#{order_status},now(),#{finish_time},#{comment})
+	</insert>
+
+
+	<delete id="doDelete" parameterType="String">
+		delete from t_order
+		where order_id = #{order_id}
+	</delete>
+
+</mapper>

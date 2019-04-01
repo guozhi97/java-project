@@ -1,0 +1,229 @@
+				* {
+					margin: 0;
+					padding: 0;
+					font-family: "微软雅黑";
+				}
+				
+				ul,
+				li {
+					list-style: none;
+				}
+				
+				body {
+					background-color: #EEEEEE;
+				}
+				
+				a {
+					text-decoration: none;
+				}
+				/*header style*/
+				
+				header {
+					position: fixed;
+					/*top: 0px;*/
+					width: 1260px;
+					margin: 0 auto;
+					height: 52px;
+					z-index: 3;
+					min-width: 1032px;
+					/*overflow: hidden;*/
+					background: #fff;
+					box-shadow: 0 1px 3px rgba(26, 26, 26, 0.1);
+				}
+				
+				header>div {
+					width: 1000px;
+					height: 42px;
+					margin: 0 auto;
+					overflow: hidden;
+					padding-top: 10px;
+				}
+				
+				header ul:first-of-type {
+					float: left;
+					height: 42px;
+				}
+				
+				header ul:first-of-type>li {
+					float: left;
+					height: 42px;
+					overflow: hidden;
+					margin-right: 30px;
+				}
+				
+				header ul:first-of-type>li>a {
+					line-height: 30px;
+					color: gray;
+					text-decoration: none;
+				}
+				
+				header ul:first-of-type>li>a:hover {
+					color: #0084FF;
+				}
+				
+				header ul:first-of-type>li:first-of-type>a {
+					margin-right: 100px;
+					font-size: 20px;
+				}
+				
+				header ul:first-of-type>li:nth-of-type(4) {
+					margin-right: 10px;
+				}
+				
+				header ul:first-of-type>li>input {
+					width: 298px;
+					height: 24px;
+					border: 1px solid #ebebeb;
+					border-radius: 4px;
+					background-color: #f6f6f6;
+					background-image: url(../../img/index-img/topsearch.png);
+					background-repeat: no-repeat;
+					background-position: 97% 50%;
+					padding: 4px 10px 4px 16px;
+				}
+				
+				header ul:first-of-type>li>input:focus {
+					animation: dropright .25s, 100ms ease-in-out;
+					animation-fill-mode: forwards;
+					border: 2px solid #000;
+				}
+				
+				.toless {
+					animation: dropless .25s, 100ms ease-in-out;
+					animation-fill-mode: forwards;
+				}
+				
+				@keyframes dropless {
+					from {
+						width: 56px;
+					}
+					to {
+						width: 1px;
+					}
+				}
+				
+				@keyframes dropright {
+					from {
+						width: 298px;
+					}
+					to {
+						width: 350px;
+					}
+				}
+				
+				header ul:first-of-type>li>button {
+					width: 56px;
+					height: 32px;
+					font-size: 14px;
+					border: 1px solid #0084ff;
+					border-radius: 3px;
+					background-color: #0084ff;
+					color: #fefefe;
+					overflow: hidden;
+				}
+				header ul:first-of-type>li>button:hover{
+					color: #EBEBEB;					
+				}
+				
+				header ul:last-of-type {
+					float: right;
+					height: 37px;
+					padding-top: 5px;
+				}
+				
+				header ul:last-of-type>li {
+					float: left;
+					margin-left: 20px;
+				}
+				
+				header ul:last-of-type>li:first-of-type {
+					padding-top: 5px;
+				}
+				
+				header ul:last-of-type>li:last-of-type:hover>dl {
+					display: block;
+				}
+				
+				header ul:last-of-type>li:first-of-type:hover>dl{
+				/* 	display: block; */
+				}
+				
+				header dl.top-drop2 {
+					position: absolute;
+					z-index: 3;
+					top: 47px;
+					right: 180px;
+					width: 180px;
+					min-height: 60px;
+					background-color: #FFFFFF;
+					border-radius: 2px;
+					border: 1px solid #EBEBEB;
+					display: none;
+				}
+				
+				header dl.top-drop2:hover{
+					display: block;
+				}
+				
+				header dl.top-drop2>dt{
+					display: block;
+					border-bottom: 1px solid #808080;
+					line-height: 30px;
+					color: gray;
+					text-align: center;
+					font-size: 15px;
+					font-weight: 500;
+				}
+				
+				header dl.top-drop2>dd {
+					display: block;
+					border-bottom: 1px solid #EBEBEB;
+					line-height: 30px;
+					color: gray;
+					width:170px;
+					padding-left: 5px;
+					padding-right: 5px;
+					text-align: center;
+					font-size: 14px;
+					font-weight: 400;
+					white-space:nowrap;/*如果是中文 设置文字超出范围不断行*/
+					overflow:hidden;/*设置超出控件范围隐藏；*/
+					text-overflow:ellipsis;/* 设置多余文本隐藏显示；*/
+				}
+				
+				header dl.top-drop2>dd:hover {
+					color: #F6F6F6;
+					background-color: #0084FF;
+				}
+				
+				header dl.top-drop {
+					position: absolute;
+					z-index: 3;
+					top: 47px;
+					width: 90px;
+					height: 60px;
+					background-color: #FFFFFF;
+					border-radius: 2px;
+					border: 1px solid #EBEBEB;
+					display: none;
+				}
+				
+				header dl.top-drop:hover {
+					/* display: block; */
+				}
+				
+				header dl.top-drop>dd {
+					display: block;
+					border-bottom: 1px solid #EBEBEB;
+					line-height: 30px;
+					color: gray;
+					text-align: center;
+					font-size: 14px;
+					font-weight: 400;
+				}
+				
+				header dl.top-drop>dd:hover {
+					color: #F6F6F6;
+					background-color: #0084FF;
+				}
+				/*header style end*/

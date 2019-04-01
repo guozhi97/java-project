@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+       Copyright 2009-2016 the original author or authors.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Answer">
+
+  <resultMap type="answer" id="AnswerResult">
+    <id column="aid" jdbcType="INTEGER" property="aid"/>
+    <result column="pid" jdbcType="INTEGER" property="pid"/>
+    <result column="content" jdbcType="VARCHAR" property="content"/>
+    <result column="time" jdbcType="VARCHAR" property="time"/>
+  </resultMap>
+
+  <select id="getall"  resultMap="AnswerResult">
+    SELECT * FROM answer;
+  </select>
+
+  <select id="find" parameterType="INTEGER" resultMap="AnswerResult">
+    SELECT * FROM answer WHERE pid=#{pid};
+  </select>
+  
+  <select id="findone" parameterType="INTEGER" resultMap="AnswerResult">
+    SELECT * FROM answer WHERE aid=#{aid};
+  </select>
+
+  <delete id="remove" parameterType="INTEGER">
+    DELETE FROM answer WHERE aid = #{aid}
+  </delete>
+
+  <insert id="insert" parameterType="answer" useGeneratedKeys="false">
+    INSERT INTO answer
+    (
+    pid,
+    content,
+    time
+    )
+    VALUES
+    ( #{pid},
+    #{content},
+    #{time}
+    )
+  </insert>
+
+
+</mapper>

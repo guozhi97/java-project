@@ -1,0 +1,47 @@
+section>div.se-title,
+article {
+	width: 1000px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+div.se-title>img {
+	width: 500px;
+	display: block;
+	height: 200px;
+	margin: 0 auto;
+}
+
+div.se-title>p {
+	color: #333;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	text-indent: 2em;
+	line-height: 24px;
+}
+
+div.se-title>ul>li {
+	line-height: 24px;
+	border-bottom: 1px dashed darkgray;
+}
+
+div.se-title>ul>li>span {
+	margin-right: 2em;
+}
+
+section>article>h3 {
+	margin-top: 20px;
+	font-size: 18px;
+	color: #333333;
+	line-height: 40px;
+}
+
+section>article>p {
+	text-indent: 2em;
+	line-height: 30px;
+}
+
+section>article span:first-of-type {
+	font-weight: bold;
+	margin-right: 2em;
+}

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+       Copyright 2009-2016 the original author or authors.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="TbArcticle">
+
+  <resultMap type="tbarcticle" id="arcticlerResult">
+    <id column="arid" jdbcType="INTEGER" property="arid"/>
+    <result column="title" jdbcType="VARCHAR" property="title"/>
+    <result column="content" jdbcType="VARCHAR" property="content"/>
+    <result column="uid" jdbcType="VARCHAR" property="uid"/>
+    <result column="time" jdbcType="VARCHAR" property="time"/>
+    <result column="apploud" jdbcType="INTEGER" property="apploud"/>
+  </resultMap>
+
+  <select id="getall"  resultMap="arcticlerResult">
+    SELECT * FROM tb_arcticle;
+  </select>
+
+  <select id="findone" parameterType="INTEGER" resultType="tbarcticle">
+    SELECT * FROM tb_arcticle WHERE arid=#{arid};
+  </select>
+
+  <select id="findfor_user" parameterType="String" resultMap="arcticlerResult">
+    SELECT * FROM tb_arcticle WHERE uid=#{uid};
+  </select>
+  
+  <select id="findfor_content" parameterType="String" resultMap="arcticlerResult">
+    SELECT * FROM tb_arcticle WHERE title like CONCAT('%',#{str},'%') or content like CONCAT('%',#{str},'%');
+  </select>
+
+
+
+  <delete id="remove" parameterType="INTEGER">
+    DELETE FROM tb_arcticle WHERE arid = #{arid}
+  </delete>
+
+  <insert id="insert" parameterType="tbarcticle" useGeneratedKeys="false">
+    INSERT INTO tb_arcticle
+    (
+    title,
+    content,
+    uid,
+    time
+    )
+    VALUES
+    (
+     #{title},
+     #{content},
+     #{uid},
+     #{time}
+    )
+  </insert>
+  <update id="addapploud" parameterType="INTEGER">
+    UPDATE tb_arcticle SET
+    apploud=apploud+1
+    WHERE
+    arid = #{arid}
+  </update>
+
+</mapper>

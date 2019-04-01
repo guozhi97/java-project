@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+       Copyright 2009-2016 the original author or authors.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="TbAnswer">
+
+  <resultMap type="tbanswer" id="tbanswerResult">
+    <id column="anid" jdbcType="INTEGER" property="anid"/>
+    <result column="content" jdbcType="VARCHAR" property="content"/>
+    <result column="arid" jdbcType="INTEGER" property="arid"/>
+    <result column="time" jdbcType="VARCHAR" property="time"/>
+    <result column="uid" jdbcType="VARCHAR" property="uid"/>
+    <result column="ansid" jdbcType="INTEGER" property="ansid"/>
+  </resultMap>
+
+  <select id="getall"  resultMap="tbanswerResult">
+    SELECT * FROM tb_answer;
+  </select>
+
+  <select id="findone" parameterType="INTEGER" resultType="tbanswer">
+    SELECT * FROM tb_answer WHERE anid=#{anid};
+  </select>
+  
+  <select id="findfor_answer" parameterType="INTEGER" resultMap="tbanswerResult">
+    SELECT * FROM tb_answer WHERE ansid=#{ansid};
+  </select>
+  
+  <select id="findfor_arcticle" parameterType="INTEGER" resultMap="tbanswerResult">
+    SELECT * FROM tb_answer WHERE arid=#{arid};
+  </select>
+  
+  <select id="findfor_user" parameterType="String" resultMap="tbanswerResult">
+    SELECT * FROM tb_answer WHERE uid=#{uid};
+  </select>
+  
+  <select id="findfor_content" parameterType="String" resultMap="tbanswerResult">
+    SELECT * FROM tb_answer WHERE content like CONCAT('%',#{str},'%');
+  </select>
+
+  <delete id="remove" parameterType="INTEGER">
+    DELETE FROM tb_answer WHERE anid = #{anid}
+  </delete>
+
+  <insert id="insert" parameterType="tbanswer" useGeneratedKeys="false">
+    INSERT INTO tb_answer
+    (
+    content,
+    arid,
+    time,    
+    uid,
+    ansid
+    )
+    VALUES
+    (
+     #{content},
+     #{arid},
+     #{time},
+     #{uid},
+     #{ansid}
+    )
+  </insert>
+
+
+</mapper>

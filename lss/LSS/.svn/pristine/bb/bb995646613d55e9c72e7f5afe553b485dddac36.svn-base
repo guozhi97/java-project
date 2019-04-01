@@ -1,0 +1,17 @@
+订单统计：
+#select COUNT(*) from t_pick_order where is_valid=1 and create_time BETWEEN '2016-11-24' AND '2017-01-04';
+select COUNT(*) from t_pick_order where is_valid=1 and create_time >= '2016-11-24' and create_time<='2017-01-04' and due_fee!=0;
+
+在线收款统计：
+select COUNT(*) from t_pay where pay_time >= '2016-11-24' and pay_time<='2017-01-04' ;
+
+
+订单总体情况概览：
+select count(*) as 'total_orders',
+count(case  when od.is_valid='1' then od.order_id END) as 'valide_orders',
+count(case  when od.is_valid='0' then od.order_id END) as 'invalid_orders',
+count(case  when od.order_status=-1 and od.is_valid='1' then od.order_id END) as 'canceled_orders' ,
+count(case  when od.due_fee=300 and od.order_status=4 then od.order_id END) as 'pay_f2f',
+count(case  when od.due_fee=0 and order_status =4 then od.order_id END) as 'pay_online',
+count(case when od.order_status =4 then od.order_id END) as 'finished_orders'
+FROM t_pick_order od where create_time BETWEEN '2017-04-01 00:00:00' and '2017-04-30 23:59:59'

@@ -1,0 +1,363 @@
+		/*body>a:first-of-type {
+			width: 40px;
+			height: 40px;
+			background-image: url(img/agree.png);
+			background-repeat: no-repeat;
+			position: fixed;
+			right: 10px;
+			bottom: 50%;
+			background-color: #E5F3FF;
+			background-position: 40% 40%;
+			background-size: 30px 30px;
+			border: 2px solid gray;
+		}*/
+		
+		body>div.me-bg {
+			width: 100%;
+			height: 100%;
+			background-color: darkgray;
+			opacity: 0.5;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 8;
+			display: none;
+		}
+		
+		body>.medelone{
+			background-color: #EEEEEE;
+			width: 500px;
+			height: 300px;
+			margin: 0px auto;
+			z-index: 9;
+			position: fixed;
+			top: 30%;
+			left: 30%;
+			display: none;
+			border-radius: 5px;
+		}
+		
+		body>.medelone>h4 {
+			line-height: 50px;
+			text-indent: 190px;
+			font-size: 16px;
+			color: #333333;
+			border-bottom: 1px solid darkgray;
+		}
+		
+		body>.medelone>span {
+			position: absolute;
+			right: 15px;
+			top: 10px;
+			color: gray;
+			cursor: pointer;
+		}
+		
+		body>.medelone>div {
+			/*background-color: darkgray;*/
+			height: 150px;
+			position: relative;
+		}
+		
+		body>.medelone>div>img {
+			width: 100px;
+			height: 100px;
+			top: 20px;
+			left: 50px;
+			position: absolute;
+			border: 2px solid #D3D3D3;
+			border-radius: 5px;
+		}
+		
+		body>.medelone>div>select {
+			width: 200px;
+			height: 25px;
+			border-radius: 3px;
+			position: absolute;
+			right: 100px;
+			top: 10px;
+			border: 1px solid #333333;
+		}
+		
+		body>.medelone>div>input {
+			text-indent: 10px;
+			width: 195px;
+			height: 25px;
+			border-radius: 3px;
+			position: absolute;
+			right: 100px;
+			top: 45px;
+			border: 1px solid #333333;
+		}
+		body>.medelone>div>input:nth-of-type(2){
+			top: 80px;
+		}
+		body>.medelone>div>input:last-of-type {
+			top: 115px;
+		}
+		
+		body>.medelone>input:first-of-type {
+			width: 100px;
+			height: 30px;
+			background-color: #0084FF;
+			border-radius: 3px;
+			border: none;
+			margin-left: 180px;
+			margin-top: 20px;
+			color: #EEEEEE;
+		}
+		
+		body>.model2 {
+			background-color: #EEEEEE;
+			width: 500px;
+			height: 300px;
+			margin: 0px auto;
+			z-index: 9;
+			position: fixed;
+			top: 30%;
+			left: 30%;
+			display: none;
+			border-radius: 5px;
+		}
+		
+		body>.model2>h4 {
+			line-height: 50px;
+			text-indent: 190px;
+			font-size: 16px;
+			color: #333333;
+			border-bottom: 1px solid darkgray;
+		}
+		
+		body>.model2>span {
+			position: absolute;
+			right: 15px;
+			top: 10px;
+			color: gray;
+			cursor: pointer;
+		}
+		
+		body>.model2>div {
+			/*background-color: darkgray;*/
+			height: 150px;
+			position: relative;
+		}
+		
+		body>.model2>div>input {
+			height: 30px;
+			width: 350px;
+			margin-left: 60px;
+			margin-top: 20px;
+			border: 1px solid #333333;
+			display: block;
+			border-radius: 5px;
+			text-indent: 1em;
+		}
+		
+		body>.model2>div>textarea {
+			text-indent: 1em;
+			height: 100px;
+			width: 350px;
+			margin-left: 60px;
+			margin-top: 20px;
+			border: 1px solid #333333;
+			border-radius: 5px;
+		}
+		
+		body>.model2>input:last-of-type {
+			width: 100px;
+			height: 30px;
+			background-color: #0084FF;
+			border-radius: 3px;
+			border: none;
+			margin-left: 180px;
+			margin-top: 20px;
+			color: #EEEEEE;
+		}
+		
+		body>.model3 {
+			background-color: #EEEEEE;
+			width: 500px;
+			height: 300px;
+			margin: 0px auto;
+			z-index: 9;
+			position: fixed;
+			top: 30%;
+			left: 30%;
+			display: none;
+			border-radius: 5px;
+		}
+		
+		body>.model3>h4 {
+			line-height: 50px;
+			text-indent: 230px;
+			font-size: 16px;
+			color: #333333;
+			border-bottom: 1px solid darkgray;
+		}
+		
+		body>.model3>span {
+			position: absolute;
+			right: 15px;
+			top: 10px;
+			color: gray;
+			cursor: pointer;
+		}
+		
+		body>.model3>div {
+			/*background-color: darkgray;*/
+			height: 150px;
+			position: relative;
+		}
+		
+		body>.model3>div>textarea {
+			padding: 5px;
+			text-indent: 1em;
+			line-height: 20px;
+			height: 100px;
+			width: 350px;
+			margin-left: 60px;
+			margin-top: 20px;
+			border: 1px solid #333333;
+			border-radius: 5px;
+		}
+		
+		body>.model3>input {		
+			width: 100px;
+			height: 30px;
+			background-color: #0084FF;
+			border-radius: 3px;
+			border: none;
+			margin-left: 180px;
+			margin-top: 20px;
+			color: #EEEEEE;
+		}
+		
+		body>.model4 {
+			background-color: #EEEEEE;
+			width: 500px;
+			height: 300px;
+			margin: 0px auto;
+			z-index: 9;
+			position: fixed;
+			top: 30%;
+			left: 30%;
+			display: none;
+			border-radius: 5px;
+		}
+		
+		body>.model4>h4 {
+			line-height: 50px;
+			text-indent: 230px;
+			font-size: 16px;
+			color: #333333;
+			border-bottom: 1px solid darkgray;
+		}
+		
+		body>.model4>span {
+			position: absolute;
+			right: 15px;
+			top: 10px;
+			color: gray;
+			cursor: pointer;
+		}
+		
+		body>.model4>div {
+			/*background-color: darkgray;*/
+			height: 130px;
+			position: relative;
+		}
+		
+		body>.model4>div>input {
+			height: 30px;
+			width: 350px;
+			margin-left: 70px;
+			margin-top: 20px;
+			border: 1px solid #333333;
+			display: block;
+			border-radius: 5px;
+			text-indent: 1em;
+		}
+		
+		body>.model4>input:first-of-type{
+			width: 100px;
+			height: 30px;
+			background-color: #0084FF;
+			border-radius: 3px;
+			border: none;
+			margin-left: 130px;
+			color: #EEEEEE;
+		}
+		
+		body>.model4>input:last-of-type {
+			width: 100px;
+			height: 30px;
+			background-color: #0084FF;
+			border-radius: 3px;
+			border: none;
+			margin-left: 10px;
+			color: #EEEEEE;
+		}
+		body>.model4>input:hover{
+			background-color: blue;
+		}
+		
+		body>.model5 {
+			background-color: #EEEEEE;
+			width: 500px;
+			height: 300px;
+			margin: 0px auto;
+			z-index: 9;
+			position: fixed;
+			top: 30%;
+			left: 30%;
+			display: none;
+			border-radius: 5px;
+		}
+		
+		body>.model5>h4 {
+			line-height: 50px;
+			text-indent: 230px;
+			font-size: 16px;
+			color: #333333;
+			border-bottom: 1px solid darkgray;
+		}
+		
+		body>.model5>span {
+			position: absolute;
+			right: 15px;
+			top: 10px;
+			color: gray;
+			cursor: pointer;
+		}
+		
+		body>.model5>div {
+			/*background-color: darkgray;*/
+			height: 120px;
+			position: relative;
+		}
+		
+		body>.model5>div>input {
+			height: 30px;
+			width: 350px;
+			margin-left: 70px;
+			margin-top: 20px;
+			border: 1px solid #333333;
+			display: block;
+			border-radius: 5px;
+			text-indent: 1em;
+		}
+		
+		
+		body>.model5>input:last-of-type {
+			width: 150px;
+			height: 35px;
+			background-color: #0084FF;
+			border-radius: 3px;
+			border: none;
+			margin-left: 150px;
+			color: #EEEEEE;
+		}
+		
+		body>.model5>input:hover{
+			background-color: blue;
+		}

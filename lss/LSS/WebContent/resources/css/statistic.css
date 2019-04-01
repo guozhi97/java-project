@@ -1,0 +1,51 @@
+.statistic-container{
+	background-color:#eee;
+	display:block;
+	position: relative; 
+	top: 0; 
+	left: 0;
+	height: 100%; 
+	overflow: hidden;
+}
+.statistic-table table {
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid #eee;
+    text-align:center;
+    vertical-align:middle;
+    border-collapse: collapse !important;
+    border-radius: 1px;
+    border-radius: 1px;
+    width: 98%;
+}
+
+.table-bordered .table-cell{ 
+	border: 2px solid #dfdfdf;
+	}
+
+.statistic-table td{
+	text-align:center;
+	line-height:30px;
+	
+	vertical-align:middle;
+	font-size: 14px;
+}
+
+.statistic-table .title{
+	font-size: 18px;
+	color: green;
+	font-weight: bold;
+}
+
+.statistic-table .tb-header{
+	background-color: teal;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.statistic-table .tb-header-main{
+	background-color: silver;
+	font-size:15px;
+	color:purple;
+	font-weight:bold;
+	
+}

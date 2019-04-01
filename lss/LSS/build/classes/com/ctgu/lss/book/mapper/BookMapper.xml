@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ctgu.lss.book.dao.BookDao">	<!-- 为了返回list 类型而定义的returnMap -->
+	<resultMap type="Book" id="BookList">
+		<id column="book_id" property="book_id" />
+		<result column="order_id" property="order_id" />
+		<result column="index_num" property="index_num" />
+		<result column="book_name" property="book_name" />
+		<result column="author_name" property="author_name" />
+		<result column="book_status" property="book_status" />
+	</resultMap>
+	
+	
+	<select id="findById" parameterType="Integer" resultType="Book">
+		select
+		* from
+		t_books where book_id=#{book_id}
+	</select>
+	
+	<select id="findBooksByOrderId" parameterType="String" resultMap="BookList">
+		select
+		* from
+		t_books where order_id=#{order_id}
+	</select>
+
+	<select id="findAll" resultMap="BookList">
+		select * from t_books
+	</select>
+
+	<delete id="deleteBookByOrderId" parameterType="String">
+	delete from t_books where order_id = #{order_id}
+	</delete>
+
+	<insert id="doInsert" parameterType="Book">
+		insert into t_books(order_id,index_num,book_name,author_name,book_status)
+		values(#{order_id},#{index_num},#{book_name},#{author_name},#{book_status})
+	</insert>
+	
+	
+</mapper>

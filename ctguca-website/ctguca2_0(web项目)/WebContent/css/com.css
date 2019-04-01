@@ -1,0 +1,153 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑";
+}
+
+ul, li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+header, section, footer {
+	min-width: 1260px;
+	width: 1260px;
+	margin: 0 auto;
+}
+
+body>div.me-bg {
+	width: 100%;
+	height: 100%;
+	background-color: darkgray;
+	opacity: 0.5;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	display: none;
+}
+
+body>div.me-con {
+	background-color: #EEEEEE;
+	width: 500px;
+	height: 300px;
+	margin: 0px auto;
+	z-index: 6;
+	position: fixed;
+	top: 30%;
+	left: 30%;
+	display: none;
+	border-radius: 5px;
+}
+
+body>div.me-con>h4 {
+	line-height: 50px;
+	text-indent: 190px;
+	font-size: 16px;
+	color: #333333;
+	border-bottom: 1px solid darkgray;
+}
+
+body>div.me-con>lable {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	color: gray;
+	cursor: pointer;
+}
+
+body>div.me-con>form {
+	/*background-color: darkgray;*/
+	height: 150px;
+	position: relative;
+}
+
+body>div.me-con>form>input {
+	height: 30px;
+	width: 350px;
+	margin-left: 60px;
+	margin-top: 20px;
+	border: 1px solid #333333;
+	display: block;
+	border-radius: 5px;
+	text-indent: 1em;
+	padding: 5px;
+}
+
+body>div.me-con>form>input:last-of-type {
+	width: 100px;
+	height: 30px;
+	background-color: #0084FF;
+	border-radius: 3px;
+	border: none;
+	margin-left: 180px;
+	margin-top: 30px;
+	text-indent: 0;
+	color: #EEEEEE;
+}
+
+body>div.me-con2 {
+	background-color: #EEEEEE;
+	width: 500px;
+	height: 300px;
+	margin: 0px auto;
+	z-index: 6;
+	position: fixed;
+	top: 30%;
+	left: 30%;
+	display: none;
+	border-radius: 5px;
+}
+
+body>div.me-con2>h4 {
+	line-height: 50px;
+	text-indent: 190px;
+	font-size: 16px;
+	color: #333333;
+	border-bottom: 1px solid darkgray;
+}
+
+body>div.me-con2>lable {
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	color: gray;
+	cursor: pointer;
+}
+
+body>div.me-con2>form {
+	/*background-color: darkgray;*/
+	height: 150px;
+	position: relative;
+}
+
+body>div.me-con2>form>textarea {
+	height: 100px;
+	width: 350px;
+	margin-left: 60px;
+	margin-top: 20px;
+	border: 1px solid #333333;
+	display: block;
+	border-radius: 5px;
+	text-indent: 1em;
+	padding: 5px;
+}
+
+body>div.me-con2>form>input:last-of-type {
+	width: 100px;
+	height: 30px;
+	background-color: #0084FF;
+	border-radius: 3px;
+	border: none;
+	margin-left: 180px;
+	margin-top: 30px;
+	text-indent: 0;
+	color: #EEEEEE;
+}

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+section {
+	height:455px;
+}
+section>div{
+	width:700px;
+	height:80px;
+	margin:50px auto;
+}
+section>div>img{
+	width:49px;
+	height:49px;
+	display:block;
+	float:left;
+}
+section>div>p{
+	width:280px;
+	height:20px;
+	text-indent:40px;
+	line-height: 20px;
+	color:gray;
+}
+section>div>p:first-of-type{
+	font-size:16px;
+	color:#333;
+}

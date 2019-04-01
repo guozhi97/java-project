@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ctgu.lss.delivarea.dao.DelivAreaDao">
+
+    <cache readOnly="true" eviction="FIFO" ></cache>
+    
+	<!-- 为了返回list 类型而定义的returnMap -->
+	<resultMap type="DelivArea" id="DelivAreaList">
+		<id column="deliv_area_id" property="deliv_area_id" />
+		<result column="deliv_area_name" property="deliv_area_name" />
+	</resultMap>
+
+	<select id="findById" resultType="Department">
+		select * from t_deliv_area where deliv_area_id = #{deliv_area_id}
+	</select>
+	
+	<select id="findAll" resultMap="DelivAreaList">
+		select * from t_deliv_area
+	</select>
+
+
+</mapper>

@@ -1,0 +1,23 @@
+2018/09/07  21:48           188,671 commons-beanutils-1.7.0.jar
+2018/09/07  21:48           575,389 commons-collections-3.2.1.jar
+2018/09/07  21:48           245,274 commons-lang-2.3.jar
+2018/07/28  20:15            60,841 commons-logging-1.1.1.jar
+2018/09/07  21:48            77,826 ezmorph-1.0.3.jar
+2018/09/07  21:13           409,289 fastjson-1.2.2.jar
+2018/07/28  20:15           622,634 hibernate-validator-5.1.0.Final.jar
+2018/07/28  20:15            64,359 hibernate-validator-annotation-processor-5.1.0.Final.jar
+2018/09/07  21:46           148,490 json-lib-2.2.3-jdk15.jar
+2018/07/28  20:15            20,682 jstl.jar
+2019/04/01  09:17                 0 lib.txt
+2018/07/28  20:15           714,073 mybatis-3.2.8.jar
+2018/07/28  20:15           403,821 MySQL-Driver.jar
+2018/07/28  20:15           337,844 spring-aop-3.2.9.RELEASE.jar
+2018/07/28  20:15           612,952 spring-beans-3.2.9.RELEASE.jar
+2018/07/28  20:15           866,490 spring-context-3.2.9.RELEASE.jar
+2018/07/28  20:15           884,780 spring-core-3.2.9.RELEASE.jar
+2018/07/28  20:15           196,405 spring-expression-3.2.9.RELEASE.jar
+2018/07/28  20:15           632,855 spring-web-3.2.9.RELEASE.jar
+2018/07/28  20:15           637,940 spring-webmvc-3.2.9.RELEASE.jar
+2018/07/28  20:15           393,259 standard.jar
+              21 个文件      8,093,874 字节
+               2 个目录 124,982,591,488 可用字节
